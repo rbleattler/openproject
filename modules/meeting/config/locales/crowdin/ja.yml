@@ -69,11 +69,9 @@ ja:
         invalid_time_format: "有効な時間ではありません。必要なフォーマット: HH:MM"
     models:
       recurring_meeting: "Recurring meeting"
-      structured_meeting: "One-time meeting"
-      meeting: "会議"
+      meeting: "One-time meeting"
       meeting_agenda_item: "議題項目"
       meeting_agenda: "アジェンダ"
-      meeting_minutes: "議事録"
       meeting_section: "セクション"
   activity:
     filter:
@@ -129,7 +127,7 @@ ja:
   label_recurring_meeting_copy: "Copy as one-time"
   label_recurring_meeting_cancel: "Cancel this occurrence"
   label_recurring_meeting_delete: "Delete occurrence"
-  label_recurring_meeting_restore: "Restore this occurrence"
+  label_recurring_meeting_restore: "この予定を復元"
   label_recurring_meeting_schedule: "Schedule"
   label_recurring_meeting_next_occurrence: "Next occurrence"
   label_recurring_meeting_more: "There are %{count} more scheduled meetings (%{schedule})."
@@ -213,9 +211,6 @@ ja:
         new_date_time: "新しい日付/時刻"
     label_mail_all_participants: "すべての参加者にメールを送信"
     types:
-      classic: "Classic (unsupported)"
-      classic_text: "Note: Classic meetings will be removed in the next version of OpenProject."
-      structured: "Structured"
       one_time: "One-time"
       recurring: "Recurring"
       recurring_text: "Create meeting series with dynamic template for each occurrence."

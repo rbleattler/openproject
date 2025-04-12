@@ -70,11 +70,9 @@ es:
         invalid_time_format: "no es una hora válida. Formato requerido: HH:MM"
     models:
       recurring_meeting: "Reunión periódica"
-      structured_meeting: "Reunión única"
-      meeting: "Reunión"
+      meeting: "One-time meeting"
       meeting_agenda_item: "Puntos de Agenda"
       meeting_agenda: "Agenda"
-      meeting_minutes: "Minutas"
       meeting_section: "Sección"
   activity:
     filter:
@@ -215,9 +213,6 @@ es:
         new_date_time: "Fecha y hora nuevas"
     label_mail_all_participants: "Enviar email a todos los participantes"
     types:
-      classic: "Classic (unsupported)"
-      classic_text: "Note: Classic meetings will be removed in the next version of OpenProject."
-      structured: "Estructurada"
       one_time: "Única"
       recurring: "Periódico"
       recurring_text: "Cree series de reuniones con una plantilla dinámica para cada repetición."
@@ -401,7 +396,7 @@ es:
   label_meeting_state_in_progress: "En curso"
   label_meeting_reopen_action: "Reabrir reunión"
   label_meeting_close_action: "Cerrar reunión"
-  label_meeting_in_progress_action: "Start meeting"
+  label_meeting_in_progress_action: "Empezar reunión"
   text_meeting_open_description: "Esta reunión es abierta. Puede añadir/eliminar puntos del orden del día y editarlos a su antojo. Una vez que la agenda esté lista, márquela como en curso para documentar los resultados."
   text_meeting_closed_description: "Esta reunión está cerrada. Ya no puede añadir/eliminar elementos de la agenda."
   text_meeting_in_progress_description: "Esta reunión está en curso. Puede documentar los resultados de cada punto del orden del día, reorganizarlos e incluso añadir otros nuevos. Una vez finalizada la reunión, puede marcarla como cerrada para bloquearla."

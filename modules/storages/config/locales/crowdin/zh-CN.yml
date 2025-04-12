@@ -251,12 +251,12 @@ zh-CN:
         oidc_non_oidc_user: 当前用户在预配的情况下，没有被 OpenID Connect (OIDC) 身份提供商预置。请重新运行与OIDC 预置用户的检查。
         oidc_non_provisioned_user: 当前用户并非由 OpenID Connect 身份提供商提供。请针对提供的用户重新运行检查。
         one_drive:
-          client_cant_delete_folder: The client is having trouble deleting folders. Please check the setup documentation for your storage.
-          client_write_permission_missing: The client seems to have write permissions missing. Please check the setup documentation for your storage.
-          drive_id_not_found: The configured drive id could not be found. Please check the configuration.
-          drive_id_wrong: The configured drive id seems invalid. Please check the configuration.
-          existing_test_folder: The folder %{folder_name} needed for testing already exists. Please delete it and try again.
-          unexpected_content: Unexpected content found in the drive.
+          client_cant_delete_folder: 客户端在删除文件夹时遇到了问题。请检查你的存储设置文档。
+          client_write_permission_missing: 客户端似乎没有写权限。请检查您的存储设置文档。
+          drive_id_not_found: 找不到配置的驱动器 ID 。请检查配置。
+          drive_id_wrong: 配置的驱动器 ID 似乎无效。请检查配置。
+          existing_test_folder: 用于测试的文件夹 %{folder_name} 已经存在。请删除它后重试。
+          unexpected_content: 在驱动器中发现了意外的内容。
         placeholder: 检查您与服务器的连接。
         subtitle: 连接验证
         tenant_id_wrong: 已配置的 OAuth 2 客户端ID无效。请检查配置。

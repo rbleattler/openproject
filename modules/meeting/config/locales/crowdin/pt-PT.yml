@@ -70,11 +70,9 @@ pt-PT:
         invalid_time_format: "não é uma hora válida. Formato exigido: HH:MM"
     models:
       recurring_meeting: "Reunião recorrente"
-      structured_meeting: "Reunião única"
-      meeting: "Reunião"
+      meeting: "One-time meeting"
       meeting_agenda_item: "Pontos da ordem de trabalhos"
       meeting_agenda: "Agenda"
-      meeting_minutes: "Minutos"
       meeting_section: "Secção"
   activity:
     filter:
@@ -215,9 +213,6 @@ pt-PT:
         new_date_time: "Nova data/hora"
     label_mail_all_participants: "Enviar e-mail a todos os participantes"
     types:
-      classic: "Classic (unsupported)"
-      classic_text: "Note: Classic meetings will be removed in the next version of OpenProject."
-      structured: "Estruturada"
       one_time: "Única"
       recurring: "Recorrente"
       recurring_text: "Crie séries de reuniões com um modelo dinâmico para cada ocorrência."
@@ -290,7 +285,7 @@ pt-PT:
       full_past: "%{base} às %{time}, terminou a %{end_date}"
       never_ending: "%{base} às %{time}"
     open:
-      title: "Agenda opened"
+      title: "Agenda aberta"
       subtitle: >
         As reuniões abertas têm agendas que podem ser editadas e aparecem na secção "As minhas reuniões" dos utilizadores individuais. As alterações ao modelo da série de reuniões não afetam as ocorrências de reuniões já abertas.
       blankslate:
@@ -401,7 +396,7 @@ pt-PT:
   label_meeting_state_in_progress: "A decorrer"
   label_meeting_reopen_action: "Reabrir reunião"
   label_meeting_close_action: "Encerrar reunião"
-  label_meeting_in_progress_action: "Start meeting"
+  label_meeting_in_progress_action: "Iniciar reunião"
   text_meeting_open_description: "Esta reunião está aberta. Pode adicionar/remover pontos da ordem de trabalhos e editá-los à vontade. Quando a ordem de trabalhos estiver pronta, marque-a como em curso para documentar os resultados."
   text_meeting_closed_description: "Esta reunião está encerrada. Você não pode mais adicionar/remover itens da agenda."
   text_meeting_in_progress_description: "Esta reunião está a decorrer. Pode documentar os resultados de cada ponto da ordem de trabalhos, reorganizá-los e até adicionar novos. Quando a reunião estiver concluída, pode marcá-la como encerrada para a bloquear."
@@ -424,6 +419,6 @@ pt-PT:
   text_agenda_item_move_next_meeting: "Tem a certeza de que quer mover este ponto para a próxima reunião a %{date} às %{time}?"
   text_agenda_item_moved_to_next_meeting: "Ponto da ordem de trabalhos transferido para a reunião seguinte, a %{date}"
   text_work_package_has_no_upcoming_meeting_agenda_items: "Este pacote de trabalho ainda não está agendado em uma reunião futura."
-  text_agenda_item_move_next_meeting_cancelled: "Unable to move to the next meeting since it has been cancelled."
+  text_agenda_item_move_next_meeting_cancelled: "Não é possível mover para a próxima reunião uma vez que foi cancelada."
   text_work_package_add_to_meeting_hint: 'Use o botão "Adicionar à reunião" para adicionar este pacote de trabalho a uma reunião futura.'
   text_work_package_has_no_past_meeting_agenda_items: "Este pacote de trabalho não foi mencionado numa reunião anterior."

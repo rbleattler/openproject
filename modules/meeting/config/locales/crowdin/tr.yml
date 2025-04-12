@@ -70,11 +70,9 @@ tr:
         invalid_time_format: "geçerli bir zaman değil. Gerekli format: SS:DD"
     models:
       recurring_meeting: "Yinelenen toplantı"
-      structured_meeting: "Tek seferlik toplantı"
-      meeting: "Toplantı"
+      meeting: "One-time meeting"
       meeting_agenda_item: "Gündem maddesi"
       meeting_agenda: "Gündem"
-      meeting_minutes: "Dakika"
       meeting_section: "Bölüm"
   activity:
     filter:
@@ -215,9 +213,6 @@ tr:
         new_date_time: "Yeni tarih/saat"
     label_mail_all_participants: "Tüm katılımcılara e-posta gönder"
     types:
-      classic: "Classic (unsupported)"
-      classic_text: "Note: Classic meetings will be removed in the next version of OpenProject."
-      structured: "Planlı"
       one_time: "Tek seferlik"
       recurring: "Yinelenen"
       recurring_text: "Her toplantı için kullanılabilecek dinamik bir şablonla toplantı serileri oluşturun."

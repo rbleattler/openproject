@@ -70,11 +70,9 @@
         invalid_time_format: "er ikke et gyldig tidpunkt. Formatet må være HH:MM"
     models:
       recurring_meeting: "Recurring meeting"
-      structured_meeting: "One-time meeting"
-      meeting: "Møte"
+      meeting: "One-time meeting"
       meeting_agenda_item: "Dagsorden element"
       meeting_agenda: "Saksliste"
-      meeting_minutes: "Referat"
       meeting_section: "Seksjon"
   activity:
     filter:
@@ -215,9 +213,6 @@
         new_date_time: "Ny dato/tid"
     label_mail_all_participants: "Send e-post til alle deltagere"
     types:
-      classic: "Classic (unsupported)"
-      classic_text: "Note: Classic meetings will be removed in the next version of OpenProject."
-      structured: "Structured"
       one_time: "One-time"
       recurring: "Recurring"
       recurring_text: "Create meeting series with dynamic template for each occurrence."

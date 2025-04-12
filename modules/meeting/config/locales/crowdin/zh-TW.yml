@@ -69,11 +69,9 @@ zh-TW:
         invalid_time_format: "不是有效時間。所需格式: HH:MM"
     models:
       recurring_meeting: "重複性會議"
-      structured_meeting: "一次性會議"
-      meeting: "會議"
+      meeting: "One-time meeting"
       meeting_agenda_item: "議程項目"
       meeting_agenda: "會議大綱"
-      meeting_minutes: "會議記錄"
       meeting_section: "區段"
   activity:
     filter:
@@ -213,9 +211,6 @@ zh-TW:
         new_date_time: "新日期/時間"
     label_mail_all_participants: "發送電子郵件給所有參與者"
     types:
-      classic: "傳統(不支援)"
-      classic_text: "注意：傳統會議將在 OpenProject 的下一個版本中刪除。"
-      structured: "結構化"
       one_time: "一次性"
       recurring: "重覆"
       recurring_text: "為每次發生的事件建立具有動態範本的會議系列。"

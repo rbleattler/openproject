@@ -795,7 +795,7 @@ pt-PT:
       typeahead_placeholder: Procurar possíveis observadores
     relation_labels:
       parent: "Mãe"
-      child: "Child"
+      child: "Secundário"
       children: "Filhos"
       relates: "Relacionado com"
       duplicates: "Repetidos"
@@ -825,7 +825,7 @@ pt-PT:
       add_new_child: "Criar novo filho"
       create_new: "Criar novo"
       add_existing: "Adicionar existente"
-      add_existing_child: "Add child"
+      add_existing_child: "Adicionar secundário"
       remove_child: "Remover filho"
       add_new_relation: "Criar nova relação"
       add_existing_relation: "Adicionar relação existente"

@@ -9,7 +9,7 @@ ja:
     label_bcf: 'BCF'
     label_imported_failed: 'BCFトピックのインポートに失敗しました'
     label_imported_successfully: 'BCFトピックを正常にインポートしました'
-    label_bcf_issue_associated: "BCF issue associated"
+    label_bcf_issue_associated: "BCF チケット関連"
     issues: "チケット"
     recommended: '推奨'
     not_recommended: '非推奨'
@@ -85,10 +85,10 @@ ja:
         is_default: "デフォルトモデル"
         attachments: "IFCファイル"
       bim/bcf/issue:
-        bcf_comment: "BCF comment"
-        bim_snippet: "BIM snippet"
-        reference_links: "Reference links"
-        stage: "Stage"
+        bcf_comment: "BCF コメント"
+        bim_snippet: "BIMスニペット（BIM）"
+        reference_links: "参照リンク"
+        stage: "ステージ"
         viewpoint: "ビューポイント"
     errors:
       models:

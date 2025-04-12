@@ -70,11 +70,9 @@ ca:
         invalid_time_format: "no és una hora vàlida. El format requerit és: HH:MM"
     models:
       recurring_meeting: "Recurring meeting"
-      structured_meeting: "One-time meeting"
-      meeting: "Reunió"
+      meeting: "One-time meeting"
       meeting_agenda_item: "Element d'agenda"
       meeting_agenda: "Agenda"
-      meeting_minutes: "Acta"
       meeting_section: "Secció"
   activity:
     filter:
@@ -215,9 +213,6 @@ ca:
         new_date_time: "Data/hora nova"
     label_mail_all_participants: "Envia un correu a tots els participants"
     types:
-      classic: "Classic (unsupported)"
-      classic_text: "Note: Classic meetings will be removed in the next version of OpenProject."
-      structured: "Structured"
       one_time: "One-time"
       recurring: "Recurring"
       recurring_text: "Create meeting series with dynamic template for each occurrence."

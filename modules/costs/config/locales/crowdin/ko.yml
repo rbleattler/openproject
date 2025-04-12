@@ -58,9 +58,9 @@ ko:
         end_time: 완료 시간
     models:
       time_entry:
-        other: "Time entries"
+        other: "시간 항목"
       cost_entry:
-        other: "Cost entries"
+        other: "비용 항목"
       cost_type:
         other: "비용 유형"
       time_entry_activity:

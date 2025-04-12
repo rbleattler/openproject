@@ -251,12 +251,12 @@ ru:
         oidc_non_oidc_user: Текущий пользователь не представлен провайдером идентификации OpenID Connect(OIDC). Пожалуйста, повторите проверку пользователя, идентифицированного через OIDC.
         oidc_non_provisioned_user: Текущий пользователь не представлен провайдером идентификации OpenID Connect. Пожалуйста, повторите проверку пользователя.
         one_drive:
-          client_cant_delete_folder: The client is having trouble deleting folders. Please check the setup documentation for your storage.
-          client_write_permission_missing: The client seems to have write permissions missing. Please check the setup documentation for your storage.
-          drive_id_not_found: The configured drive id could not be found. Please check the configuration.
-          drive_id_wrong: The configured drive id seems invalid. Please check the configuration.
-          existing_test_folder: The folder %{folder_name} needed for testing already exists. Please delete it and try again.
-          unexpected_content: Unexpected content found in the drive.
+          client_cant_delete_folder: У клиента возникли проблемы с удалением папок. Пожалуйста, проверьте документацию по конфигурации для вашего хранилища.
+          client_write_permission_missing: Возможно, клиент не имеет прав на запись. Пожалуйста, проверьте документацию по конфигурации для вашего хранилища.
+          drive_id_not_found: Настроенный идентификатор диска не найден. Пожалуйста, проверьте конфигурацию.
+          drive_id_wrong: Настроенный идентификатор диска не найден. Пожалуйста, проверьте конфигурацию.
+          existing_test_folder: Папка %{folder_name}, необходимая для тестирования, уже существует. Удалите ее и повторите попытку.
+          unexpected_content: На диске обнаружено неожидаемое содержимое.
         placeholder: Проверьте подключение к серверу.
         subtitle: Проверка соединения
         tenant_id_wrong: Настроенный идентификатор каталога недействителен. Пожалуйста, проверьте конфигурацию.

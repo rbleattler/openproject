@@ -69,11 +69,9 @@ ko:
         invalid_time_format: "은(는) 유효한 시간이 아닙니다. 필요한 형식: HH:MM"
     models:
       recurring_meeting: "반복 미팅"
-      structured_meeting: "일회성 미팅"
-      meeting: "미팅"
+      meeting: "One-time meeting"
       meeting_agenda_item: "의제 항목"
       meeting_agenda: "의제"
-      meeting_minutes: "의사록"
       meeting_section: "섹션"
   activity:
     filter:
@@ -213,9 +211,6 @@ ko:
         new_date_time: "새로운 날짜/시간"
     label_mail_all_participants: "모든 참가자에게 이메일 보내기"
     types:
-      classic: "Classic (unsupported)"
-      classic_text: "Note: Classic meetings will be removed in the next version of OpenProject."
-      structured: "구조화됨"
       one_time: "일회성"
       recurring: "반복"
       recurring_text: "각 항목에 대해 다이내믹 템플릿을 사용하여 미팅 시리즈를 만듭니다."
@@ -397,7 +392,7 @@ ko:
   label_meeting_state_in_progress: "진행 중"
   label_meeting_reopen_action: "미팅 다시 열기"
   label_meeting_close_action: "미팅 닫기"
-  label_meeting_in_progress_action: "Start meeting"
+  label_meeting_in_progress_action: "미팅 시작"
   text_meeting_open_description: "이 미팅은 오픈 상태입니다. 의제 항목을 추가/제거하고 원하는 대로 편집할 수 있습니다. 의제가 준비되면 진행 중으로 표시하여 결과를 문서화하세요."
   text_meeting_closed_description: "이 미팅은 종료되었습니다. 더 이상 의제 항목을 추가/제거할 수 없습니다."
   text_meeting_in_progress_description: "이 미팅은 진행 중입니다. 각 의제 항목에 대한 결과를 문서화하고, 재정렬하고, 새로운 항목을 추가할 수도 있습니다. 미팅이 완료되면 닫힘으로 표시하여 잠글 수 있습니다."

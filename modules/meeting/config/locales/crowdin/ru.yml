@@ -53,7 +53,7 @@ ru:
       meeting_section:
         title: "Заголовок"
       recurring_meeting:
-        frequency: "Периодичность"
+        frequency: "Частота"
         interval: "Промежуток"
         start_date: "Начинается"
         start_time: "Время начала"
@@ -72,11 +72,9 @@ ru:
         invalid_time_format: "недопустимое время. Требуемый формат: ЧЧ:ММ"
     models:
       recurring_meeting: "Повторяющееся совещание"
-      structured_meeting: "Однократное совещание"
-      meeting: "Совещание"
+      meeting: "One-time meeting"
       meeting_agenda_item: "Пункт повестки"
       meeting_agenda: "Повестка дня"
-      meeting_minutes: "Протокол(-ы)"
       meeting_section: "Раздел"
   activity:
     filter:
@@ -219,9 +217,6 @@ ru:
         new_date_time: "Новые дата/время"
     label_mail_all_participants: "Отправить письмо всем участникам"
     types:
-      classic: "Классический (не поддерживается)"
-      classic_text: "Примечание: совещания классического типа будут удалены в следующей версии OpenProject."
-      structured: "Структурированная"
       one_time: "Однократная"
       recurring: "Периодичность"
       recurring_text: "Создать серию совещаний с динамическим шаблоном для каждого события."
@@ -273,8 +268,8 @@ ru:
     frequency:
       x_daily:
         one: "Каждый день"
-        few: "Every %{count} days"
-        many: "Every %{count} days"
+        few: "Каждые %{count} дня"
+        many: "Каждые %{count} дней"
         other: "Каждые %{count} дней"
       x_weekly:
         one: "Каждую неделю"

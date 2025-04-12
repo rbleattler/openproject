@@ -72,11 +72,9 @@ sl:
         invalid_time_format: "ni veljaven čas. Potreben format: HH:MM"
     models:
       recurring_meeting: "Recurring meeting"
-      structured_meeting: "One-time meeting"
-      meeting: "Sestanek"
+      meeting: "One-time meeting"
       meeting_agenda_item: "Agenda item"
       meeting_agenda: "Dnevni red"
-      meeting_minutes: "Zapisnik"
       meeting_section: "Section"
   activity:
     filter:
@@ -219,9 +217,6 @@ sl:
         new_date_time: "New date/time"
     label_mail_all_participants: "Send email to all participants"
     types:
-      classic: "Classic (unsupported)"
-      classic_text: "Note: Classic meetings will be removed in the next version of OpenProject."
-      structured: "Structured"
       one_time: "One-time"
       recurring: "Recurring"
       recurring_text: "Create meeting series with dynamic template for each occurrence."

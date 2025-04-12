@@ -72,11 +72,9 @@ uk:
         invalid_time_format: "не є допустимим часом. Необхідний формат: HH:MM"
     models:
       recurring_meeting: "Повторювана нарада"
-      structured_meeting: "Одноразова нарада"
-      meeting: "Нарада"
+      meeting: "One-time meeting"
       meeting_agenda_item: "Порядок денний"
       meeting_agenda: "Порядок денний"
-      meeting_minutes: "Хвилини"
       meeting_section: "Розділ"
   activity:
     filter:
@@ -219,9 +217,6 @@ uk:
         new_date_time: "Нова дата/час"
     label_mail_all_participants: "Надіслати лист усім учасникам"
     types:
-      classic: "Classic (unsupported)"
-      classic_text: "Note: Classic meetings will be removed in the next version of OpenProject."
-      structured: "Структурована"
       one_time: "Одноразова"
       recurring: "Повторювана"
       recurring_text: "Створюйте серії нарад на основі динамічного шаблона для кожної події."

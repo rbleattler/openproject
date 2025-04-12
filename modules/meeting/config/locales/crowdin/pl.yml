@@ -72,11 +72,9 @@ pl:
         invalid_time_format: "nie jest prawidłowy. Wymagany format to: GG:MM"
     models:
       recurring_meeting: "Spotkanie cykliczne"
-      structured_meeting: "Spotkanie jednorazowe"
-      meeting: "Spotkanie"
+      meeting: "One-time meeting"
       meeting_agenda_item: "Punkt programu"
       meeting_agenda: "Plan spotkania"
-      meeting_minutes: "Protokół ze spotkania"
       meeting_section: "Sekcja"
   activity:
     filter:
@@ -219,9 +217,6 @@ pl:
         new_date_time: "Nowa data/godzina"
     label_mail_all_participants: "Wyślij wiadomość e-mail do wszystkich uczestników"
     types:
-      classic: "Classic (unsupported)"
-      classic_text: "Note: Classic meetings will be removed in the next version of OpenProject."
-      structured: "Zorganizowane"
       one_time: "Jednorazowe"
       recurring: "Cykliczne"
       recurring_text: "Utwórz serię spotkań z dynamicznym szablonem dla każdego wystąpienia."

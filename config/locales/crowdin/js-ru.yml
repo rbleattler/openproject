@@ -360,7 +360,7 @@ ru:
           "15_5":
             standard:
               new_features_html: >
-                The release brings various features and improvements for you, e.g. <br> <ul class="%{list_styling_class}"> <li>Filter for descendants (children and grandchildren) of work packages.</li> <li>Benefit from advanced accessibility in the date picker.</li> <li>See % Complete included in work package table sums.</li> <li>Include a column for children in work package tables.</li> <li>Better use the date picker in mobile screens.</li> <li>PDF exports matching configured form layout.</li> </ul>
+                Релиз содержит различные функции и улучшения, например <br> <ul class="%{list_styling_class}"> <li>Фильтр для потомков (детей и внуков) рабочих пакетов.</li> <li> Улучшенное средство для выбора дат.</li> <li>Просмотр суммарного процента выполненных работ.</li> <li>Столбец потомков в таблице пакетов работ.</li> <li>Улучшено отображение средства для выбора дат на мобильных экранах.</li><li>Экспорт PDF, с настройками, соответствующими формe.</li> </ul>
     ical_sharing_modal:
       title: "Подписаться на календарь"
       inital_setup_error_message: "Произошла ошибка при получении данных."

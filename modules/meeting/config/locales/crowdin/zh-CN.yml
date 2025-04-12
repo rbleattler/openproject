@@ -69,11 +69,9 @@ zh-CN:
         invalid_time_format: "不是有效时间。所需格式：HH:MM"
     models:
       recurring_meeting: "定期会议"
-      structured_meeting: "动态会议"
-      meeting: "会议"
+      meeting: "One-time meeting"
       meeting_agenda_item: "议程项目"
       meeting_agenda: "议程"
-      meeting_minutes: "会议记录"
       meeting_section: "节"
   activity:
     filter:
@@ -213,9 +211,6 @@ zh-CN:
         new_date_time: "新日期/时间"
     label_mail_all_participants: "发送电子邮件给所有参与者"
     types:
-      classic: "经典(不支持)"
-      classic_text: "注意：经典会议将在下一版 OpenProject 中删除。"
-      structured: "结构化"
       one_time: "动态"
       recurring: "定期"
       recurring_text: "为每次事件创建带有动态模板的会议系列。"

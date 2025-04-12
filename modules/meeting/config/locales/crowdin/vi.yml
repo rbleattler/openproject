@@ -69,11 +69,9 @@ vi:
         invalid_time_format: "không phải giờ hợp lệ. Yêu cầu định dạng: HH:MM"
     models:
       recurring_meeting: "Họp định kỳ"
-      structured_meeting: "Họp đột xuất"
-      meeting: "Cuộc họp"
+      meeting: "One-time meeting"
       meeting_agenda_item: "Mục chương trình nghị sự"
       meeting_agenda: "Các ý chính"
-      meeting_minutes: "Phút"
       meeting_section: "Phần"
   activity:
     filter:
@@ -213,9 +211,6 @@ vi:
         new_date_time: "Ngày/giờ mới"
     label_mail_all_participants: "Gửi email đến tất cả người tham gia"
     types:
-      classic: "Classic (unsupported)"
-      classic_text: "Note: Classic meetings will be removed in the next version of OpenProject."
-      structured: "Đã cấu trúc"
       one_time: "Một lần"
       recurring: "Định kỳ"
       recurring_text: "Tạo chuỗi họp với mẫu động cho mỗi lần họp."

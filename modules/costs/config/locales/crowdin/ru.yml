@@ -30,7 +30,7 @@ ru:
         overridden_costs: "Переопределенные расходы"
         spent: "Потрачено"
         spent_on: "Дата"
-        logged_by: "Зарегистрировано"
+        logged_by: "Учтено"
       cost_type:
         unit: "Наименование количественного показателя"
         unit_plural: "Множественное наименование количественного показателя"
@@ -195,7 +195,7 @@ ru:
         start_time_different_date: "Дата startTime (%{start_time}) должна быть такой же, как дата spentOn (%{spent_on})."
   ee:
     features:
-      time_entry_time_restrictions: Require exact time tracking
+      time_entry_time_restrictions: Требует точного отслеживания времени
     upsale:
       time_entry_time_restrictions:
-        description: "Improve your time tracking by requiring exact start and finish times when logging time."
+        description: "Улучшите отслеживание времени, требуя точного времени начала и окончания при записи трудозатрат."

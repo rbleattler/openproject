@@ -58,11 +58,11 @@ pt-PT:
         end_time: Hora de fim
     models:
       time_entry:
-        one: "Time entry"
-        other: "Time entries"
+        one: "Entrada de hora"
+        other: "Entradas de hora"
       cost_entry:
-        one: "Cost entry"
-        other: "Cost entries"
+        one: "Entrada de custo"
+        other: "Entradas de custo"
       cost_type:
         one: "Tipo de custo"
         other: "Tipos de custos"

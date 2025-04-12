@@ -1921,31 +1921,31 @@ zh-CN:
       custom_field_hierarchies: 类型层次结构的自定义字段
       customize_life_cycle: 自定义生命周期
       date_alerts: 日期提醒
-      define_custom_style: 自定义主题和logo
+      define_custom_style: 自定义主题和 Logo
       edit_attribute_groups: 编辑属性组
       gantt_pdf_export: 甘特图 PDF 导出
-      grid_widget_wp_graph: 工作包图网格小组件
+      grid_widget_wp_graph: 工作包图微件
       ldap_groups: LDAP 用户和群组同步
       one_drive_sharepoint_file_storage: OneDrive/SharePoint 文件存储
       placeholder_users: 占位符用户
       project_list_sharing: 项目列表共享
       readonly_work_packages: 只读工作包
       sso_auth_providers: 单点登录
-      team_planner_view: 团队计划视图
-      two_factor_authentication: 双重身份认证
-      virus_scanning: 抗病毒扫描
+      team_planner_view: 工作组规划器视图
+      two_factor_authentication: 双因子认证
+      virus_scanning: 反病毒扫描
       work_package_query_relation_columns: 工作包查询关系列
       work_package_sharing: 与外部用户共享工作包
       work_package_subject_generation: 工作包主题生成
     upsale:
       title: "企业附加组件"
-      plan_title: "企业%{plan}附加组件"
-      plan_name: "%{plan}企业计划"
+      plan_title: "企业 %{plan} 附加组件"
+      plan_name: "%{plan} 企业计划"
       plan_text_html: "只能通过%{plan_name}使用。"
       link_title: "更多信息"
       hide_banner: "隐藏此广告"
       baseline_comparison:
-        description: 高亮显示过去对该清单所作的修改。
+        description: 高亮显示自从过去任意时间点以来对此列表所做的更改。
       work_package_subject_generation:
         description: "使用引用的属性和文本自动生成主题。"
       customize_life_cycle:
@@ -1963,15 +1963,15 @@ zh-CN:
       readonly_work_packages:
         description: "标记工作包为只读的特定状态。"
       custom_field_hierarchies:
-        description: "层次结构自定义字段允许通过使用多层次选择列表在工作包中组织层次结构。"
+        description: "层次结构自定义字段允许通过使用多层次选择列表来组织工作包中的层次结构。"
       date_alerts:
         description: "通过日期提醒，您将收到即将开始或完成日期的通知，以免错过或忘记重要截止日期。"
       work_package_sharing:
         description: "与非此项目成员的用户共享工作包。"
       define_custom_style:
-        title: "自定义颜色主题和logo"
-        more_info: "注：使用的logo将可公开访问。"
-        description: 使用您自己的logi和颜色自定义 OpenProject 安装。
+        title: "自定义颜色主题和 Logo"
+        more_info: "注：使用的 Logo 将可公开访问。"
+        description: 使用您自己的 Logo 和颜色来自定义 OpenProject 安装。
       custom_actions:
         title: "自定义操作"
         description: "自定义动作是一键式快捷方式，您可以在根据状态、角色、类型或项目。在某些工作包上执行一组预先定义的操作。"

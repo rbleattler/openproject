@@ -940,9 +940,9 @@ es:
         custom_field_section: Sección
       project/phase:
         date_range: "Date range"
-        definition: "Definition"
+        definition: "Definición"
       project/phase_definition:
-        name: "Name"
+        name: "Nombre"
         color: "Color"
         start_gate: "Start phase gate"
         start_gate_name: "Start phase gate name"

@@ -35,7 +35,7 @@ ko:
         label_sort_desc: "최신 순"
         label_type_to_comment: "코멘트를 추가하세요. 사람들에게 알려주려면 @을 입력하세요."
         label_submit_comment: "코멘트 제출"
-        label_who: Who?
+        label_who: 누구인가요?
         changed_on: "- 변경함:"
         created_on: "- 이 패키지를 생성함:"
         changed: "- 변경함"

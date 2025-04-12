@@ -70,11 +70,9 @@ nl:
         invalid_time_format: "is geen geldige tijd. Vereist formaat: UH:MM"
     models:
       recurring_meeting: "Terugkerende vergadering"
-      structured_meeting: "Eenmalige vergadering"
-      meeting: "Vergadering"
+      meeting: "One-time meeting"
       meeting_agenda_item: "Agendapunt"
       meeting_agenda: "Agenda"
-      meeting_minutes: "Minuten"
       meeting_section: "Sectie"
   activity:
     filter:
@@ -215,9 +213,6 @@ nl:
         new_date_time: "Nieuwe datum/tijd"
     label_mail_all_participants: "E-mail verzenden naar alle deelnemers"
     types:
-      classic: "Classic (unsupported)"
-      classic_text: "Note: Classic meetings will be removed in the next version of OpenProject."
-      structured: "Gestructureerd"
       one_time: "Eenmalig"
       recurring: "Terugkerend"
       recurring_text: "Maak vergaderreeksen met dynamische sjablonen voor elke gebeurtenis."

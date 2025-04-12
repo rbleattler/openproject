@@ -72,11 +72,9 @@ lt:
         invalid_time_format: "netinkamas laikas. Reikalingas formatas: HH:MM (pvz.: 10:30)"
     models:
       recurring_meeting: "Recurring meeting"
-      structured_meeting: "One-time meeting"
-      meeting: "Susitikimas"
+      meeting: "One-time meeting"
       meeting_agenda_item: "Darbotvarkės punktas"
       meeting_agenda: "Dienotvarkė"
-      meeting_minutes: "Minutės"
       meeting_section: "Skiltis"
   activity:
     filter:
@@ -219,9 +217,6 @@ lt:
         new_date_time: "Nauja data/laikas"
     label_mail_all_participants: "Siųsti e-laišką visiems dalyviams"
     types:
-      classic: "Classic (unsupported)"
-      classic_text: "Note: Classic meetings will be removed in the next version of OpenProject."
-      structured: "Structured"
       one_time: "One-time"
       recurring: "Recurring"
       recurring_text: "Create meeting series with dynamic template for each occurrence."

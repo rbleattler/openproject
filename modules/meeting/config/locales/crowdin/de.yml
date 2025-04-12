@@ -70,11 +70,9 @@ de:
         invalid_time_format: "ist keine gültige Zeit. Erforderliches Format: HH:MM"
     models:
       recurring_meeting: "Wiederkehrende Besprechung"
-      structured_meeting: "Einmalige Besprechung"
-      meeting: "Besprechung"
+      meeting: "One-time meeting"
       meeting_agenda_item: "Tagesordnungspunkt"
       meeting_agenda: "Agenda"
-      meeting_minutes: "Protokoll"
       meeting_section: "Abschnitt"
   activity:
     filter:
@@ -215,9 +213,6 @@ de:
         new_date_time: "Neue(s) Datum/Zeit"
     label_mail_all_participants: "E-Mail an alle Teilnehmer senden"
     types:
-      classic: "Klassisch (nicht unterstützt)"
-      classic_text: "Hinweis: Klassische Meetings werden in der nächsten Version von OpenProject entfernt."
-      structured: "Dynamisch"
       one_time: "Einmalig"
       recurring: "Terminserie"
       recurring_text: "Erstellen Sie eine Terminserie mit einer dynamischen Vorlage und wiederkehrenden Besprechungen."

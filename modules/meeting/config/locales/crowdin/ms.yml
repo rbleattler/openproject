@@ -69,11 +69,9 @@ ms:
         invalid_time_format: "bukan masa yang sah. Format yang diperlukan: JJ:MM"
     models:
       recurring_meeting: "Mesyuarat berulang"
-      structured_meeting: "Mesyuarat sekali"
-      meeting: "Mesyuarat"
+      meeting: "One-time meeting"
       meeting_agenda_item: "Item agenda"
       meeting_agenda: "Agenda"
-      meeting_minutes: "Minit mesyuarat"
       meeting_section: "Bahagian"
   activity:
     filter:
@@ -213,9 +211,6 @@ ms:
         new_date_time: "Tarikh/masa baharu"
     label_mail_all_participants: "Hantar e-mel kepada semua peserta"
     types:
-      classic: "Classic (unsupported)"
-      classic_text: "Note: Classic meetings will be removed in the next version of OpenProject."
-      structured: "Berstruktur"
       one_time: "Sekali"
       recurring: "Berulang"
       recurring_text: "Buat siri mesyuarat dengan templat dinamik untuk setiap kejadian."

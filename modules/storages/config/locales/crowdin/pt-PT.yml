@@ -242,21 +242,21 @@ pt-PT:
         host_not_found: Não foi encontrado nenhum servidor do Nextcloud no URL do anfitrião configurado. Verifique a configuração.
         missing_dependencies: 'Está em falta uma dependência necessária no armazenamento de ficheiros. Adicione a seguinte dependência: %{dependency}.'
         not_configured: Não foi possível validar a ligação.Termine, primeiro, a configuração.
-        oauth_request_not_found: OpenProject couldn't find the root folder of Nextcloud using the current logged-in user. Please check the server logs for further information.
-        oauth_request_unauthorized: The current user isn't authorized to see the main folder of Nextcloud or we couldn't acquire a token. Please check the server logs for further information.
-        oauth_token_missing: OpenProject cannot test the user level communication with Nextcloud as there's no token for the current user.
+        oauth_request_not_found: O OpenProject não conseguiu encontrar a pasta raiz do Nextcloud usando o utilizador com sessão iniciada atualmente. Consulte os registos do servidor para obter mais informações.
+        oauth_request_unauthorized: O utilizador atual não está autorizado a ver a pasta principal do Nextcloud ou não conseguirmos adquirir uma ficha. Consulte os registos do servidor para obter mais informações.
+        oauth_token_missing: O OpenProject não pode testar a comunicação de nível de utilizador com o Nextcloud uma vez que não existe ficha para o utilizador atual.
         oidc_cant_acquire_token: A sua configuração do OpenID Connect não fornece o público necessário, nem fornece capacidades de troca de tokens. Consulte a nossa documentação para obter mais informações.
         oidc_cant_exchange_token: Parece haver um problema com a configuração do Token Exchange no seu fornecedor OpenID Connect. Verifique a sua configuração e tente novamente.
         oidc_cant_refresh_token: Ocorreu um erro ao tentar verificar o seu acesso ao armazenamento. Consulte os registos do servidor para obter mais informações.
         oidc_non_oidc_user: O utilizador atual, embora aprovisionado, não foi aprovisionado por um fornecedor de identidade OpenID Connect (OIDC). Volte a executar a verificação com um utilizador aprovisionado pelo OIDC.
         oidc_non_provisioned_user: O utilizador atual não é fornecido por um fornecedor de identidade OpenID Connect. Volte a executar a verificação com um utilizador fornecido.
         one_drive:
-          client_cant_delete_folder: The client is having trouble deleting folders. Please check the setup documentation for your storage.
-          client_write_permission_missing: The client seems to have write permissions missing. Please check the setup documentation for your storage.
-          drive_id_not_found: The configured drive id could not be found. Please check the configuration.
-          drive_id_wrong: The configured drive id seems invalid. Please check the configuration.
-          existing_test_folder: The folder %{folder_name} needed for testing already exists. Please delete it and try again.
-          unexpected_content: Unexpected content found in the drive.
+          client_cant_delete_folder: O cliente está a ter problemas a eliminar pastas. Consulte a documentação de configuração para o seu armazenamento.
+          client_write_permission_missing: O cliente parece estár ter permissões de escrita em falta. Consulte a documentação de configuração para o seu armazenamento.
+          drive_id_not_found: Não foi possível encontrar o Drive ID configurado. Verifique a configuração.
+          drive_id_wrong: O Drive ID configurado parece ser inválido. Verifique a configuração.
+          existing_test_folder: A pasta %{folder_name} necessária para teste já existe. Elimine a pasta e tente novamente.
+          unexpected_content: Conteúdo inesperado encontrado na unidade.
         placeholder: Verifique a sua ligação com o servidor.
         subtitle: Validação da ligação
         tenant_id_wrong: O ID do diretório (inquilino) configurado é inválido. Verifique a configuração.

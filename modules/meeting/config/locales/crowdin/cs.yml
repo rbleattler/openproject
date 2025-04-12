@@ -72,11 +72,9 @@ cs:
         invalid_time_format: "není platný čas. Požadovaný formát: HH:MM"
     models:
       recurring_meeting: "Opakovaná schůzka"
-      structured_meeting: "Jednorázová schůzka"
-      meeting: "Schůzka"
+      meeting: "One-time meeting"
       meeting_agenda_item: "Pořad jednání"
       meeting_agenda: "Agenda"
-      meeting_minutes: "Zápis"
       meeting_section: "Sekce"
   activity:
     filter:
@@ -219,9 +217,6 @@ cs:
         new_date_time: "Nové datum/čas"
     label_mail_all_participants: "Poslat e-mail všem účastníkům"
     types:
-      classic: "Classic (unsupported)"
-      classic_text: "Note: Classic meetings will be removed in the next version of OpenProject."
-      structured: "Strukturované"
       one_time: "Jednorázový"
       recurring: "Opakované"
       recurring_text: "Vytvořte sérii schůzek s dynamickou šablonou pro každou událost."
