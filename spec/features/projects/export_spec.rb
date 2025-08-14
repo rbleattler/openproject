@@ -145,4 +145,18 @@ RSpec.describe "project export", :js do
       end
     end
   end
+
+  describe "PDF export" do
+    let(:export_type) { "PDF" }
+
+    it "exports the PDF and opens it in a new tab" do
+      new_window = window_opened_by do
+        export!
+      end
+
+      within_window new_window do
+        expect(page.source).to have_css("[type='application/pdf']")
+      end
+    end
+  end
 end

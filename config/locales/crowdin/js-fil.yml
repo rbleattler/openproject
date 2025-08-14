@@ -1080,6 +1080,8 @@ fil:
     notice_successful_delete: "Matagumpay ang pagtanggal."
     notice_successful_update: "Matagumpay nai-update."
     notice_job_started: "job started."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Masamang kahilingan."
     relations:
       empty: Walang relasyon ang umiiral

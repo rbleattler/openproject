@@ -1080,6 +1080,8 @@
     notice_successful_delete: "Slettingen var vellykket."
     notice_successful_update: "Oppdateringen var vellykket."
     notice_job_started: "jobb startet."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Ugyldig forespørsel."
     relations:
       empty: Det eksisterer ingen relasjoner

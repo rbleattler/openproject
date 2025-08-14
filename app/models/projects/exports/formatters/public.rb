@@ -31,7 +31,7 @@ module Projects::Exports
   module Formatters
     class Public < ::Exports::Formatters::Default
       def self.apply?(attribute, export_format)
-        export_format == :pdf && %i[public].include?(attribute.to_sym)
+        export_format == :pdf && attribute.to_sym == :public
       end
 
       ##

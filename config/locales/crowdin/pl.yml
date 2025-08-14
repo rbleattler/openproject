@@ -2490,6 +2490,7 @@ pl:
           label: "Uwzględnij opisy"
           caption: "Ta opcja doda kolumnę opisu w formacie nieprzetworzonym."
     your_work_packages_export: "Pakiety robocze są eksportowane"
+    your_projects_export: "Projects are being exported"
     succeeded: "Eksport ukończony"
     failed: "Podczas próby wyeksportowania pakietów roboczych wystąpił błąd: %{message}"
     errors:
@@ -3026,6 +3027,7 @@ pl:
   label_custom_logo: "Własne logo"
   label_custom_export_logo: "Logotyp eksportu niestandardowego"
   label_custom_export_cover: "Niestandardowe tło okładki eksportu"
+  label_custom_export_footer: "Custom export footer image"
   label_custom_export_cover_overlay: "Nakładka niestandardowego tła okładki eksportu"
   label_custom_export_cover_text_color: "Kolor tekstu"
   label_custom_pdf_export_settings: "Niestandardowe ustawienia eksportu w formacie PDF"
@@ -4279,6 +4281,8 @@ pl:
     To jest logotyp widniejący w eksportach plików PDF. Musi to być plik PNG lub JPEG. Zalecane jest stosowanie czarnego lub kolorowego logotypu na przezroczystym lub białym tle.
   text_custom_export_cover_instructions: >
     Jest to obraz wyświetlany w tle strony tytułowej w wyeksportowanych przez Ciebie plikach PDF. Musi to być plik obrazu w formacie PNG lub JPEG o wymiarach około 800 px szerokości na 500 px wysokości.
+  text_custom_export_footer_instructions: >
+    PDF exports will include a graphical element positioned to the left of the footer. This image must be a PNG or JPEG file with approximately 200 pixels in width.
   text_custom_favicon_instructions: >
     Jest to mała ikona, która pojawia się w oknie/karcie przeglądarki obok tytułu strony. Musi to być plik kwadratowego obrazu PNG o rozmiarze 32 na 32 piksele z przezroczystym tłem.
   text_custom_touch_icon_instructions: >

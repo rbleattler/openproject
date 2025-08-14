@@ -1080,6 +1080,8 @@ ja:
     notice_successful_delete: "正常に削除しました。"
     notice_successful_update: "正常に更新しました。"
     notice_job_started: "ジョブか開始されました。"
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "不正な要求です。"
     relations:
       empty: 関連は存在しません

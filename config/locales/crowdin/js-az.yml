@@ -1080,6 +1080,8 @@ az:
     notice_successful_delete: "Successful deletion."
     notice_successful_update: "Successful update."
     notice_job_started: "job started."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Bad Request."
     relations:
       empty: No relation exists

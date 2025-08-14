@@ -34,6 +34,10 @@ module Projects
   class ExportJob < ::Exports::ExportJob
     self.model = Project
 
+    def title
+      I18n.t("export.your_projects_export")
+    end
+
     private
 
     def prepare!

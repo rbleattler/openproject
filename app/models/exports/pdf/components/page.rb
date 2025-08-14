@@ -29,6 +29,7 @@
 #++
 
 module Exports::PDF::Components::Page
+  MAX_NR_OF_PDF_HEADER_LINES = 3
   MAX_NR_OF_PDF_FOOTER_LINES = 3
 
   def configure_page_size!(layout)
@@ -89,7 +90,40 @@ module Exports::PDF::Components::Page
   def write_footers!
     pdf.repeat lambda { |pg| header_footer_filter_pages.exclude?(pg) }, dynamic: true do
       draw_footer_on_page
+      draw_footer_image
     end
+  end
+
+  def custom_footer_image
+    return unless CustomStyle.current.present? &&
+                  CustomStyle.current.export_footer.present? && CustomStyle.current.export_footer.local_file.present?
+
+    image_file = CustomStyle.current.export_footer.local_file.path
+    content_type = OpenProject::ContentTypeDetector.new(image_file).detect
+    return unless pdf_embeddable?(content_type)
+
+    image_file
+  end
+
+  def draw_footer_image
+    footer_image = custom_footer_image
+    height = styles.page_footer[:size] || 0
+    return if footer_image.nil? || height <= 0
+
+    image_obj, image_info = pdf.build_image_object(footer_image)
+    pdf.embed_image(image_obj, image_info, footer_image_embed_options(image_info, height))
+  end
+
+  def footer_image_embed_options(image_info, height)
+    scale = height / image_info.height.to_f
+    width = image_info.width.to_f * scale
+    {
+      at: [pdf.bounds.left - width - height, styles.page_footer_offset + height - 1],
+      height:,
+      scale:,
+      position: :right,
+      vposition: :bottom
+    }
   end
 
   def draw_footer_on_page

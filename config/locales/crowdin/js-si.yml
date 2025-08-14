@@ -1080,6 +1080,8 @@ si:
     notice_successful_delete: "සාර්ථක මකාදැමීම."
     notice_successful_update: "සාර්ථක යාවත්කාලීන කිරීම."
     notice_job_started: "job started."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "නරක ඉල්ලීම."
     relations:
       empty: සම්බන්ධයක් නොමැත

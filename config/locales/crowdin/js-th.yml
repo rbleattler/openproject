@@ -1079,6 +1079,8 @@ th:
     notice_successful_delete: "ลบเรียบร้อยแล้ว"
     notice_successful_update: "ปรับปรุงข้อมูลเรียบร้อยแล้ว"
     notice_job_started: "เรื่มงาน"
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "คำขอไม่ถูกต้อง"
     relations:
       empty: ไม่มีความสัมพันธ์

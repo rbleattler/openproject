@@ -28,36 +28,28 @@
 # See COPYRIGHT and LICENSE files for more details.
 #++
 
-module Meetings::PDF
-  module PageHead
-    def write_page_head
-      with_vertical_margin(styles.page_heading_margins) do
-        write_page_title
-      end
-      with_vertical_margin(styles.page_subtitle_margins) do
-        write_meeting_subtitle
-      end
-      write_hr
+module Meetings
+  class Exporter < ::Exports::Exporter
+    self.model = Meeting
+
+    attr_accessor :template
+
+    def self.key
+      :pdf
     end
 
-    def write_page_title
-      pdf.formatted_text([styles.page_heading.merge(
-        { text: meeting.title, link: url_helpers.meeting_url(meeting) }
-      )])
+    def initialize(meeting, options = {})
+      opts = options[:options] || options
+      super(meeting, opts)
+
+      self.template =
+        if Meetings::PDF::Minutes::Exporter.active?(opts[:template])
+          Meetings::PDF::Minutes::Exporter.new(meeting, opts)
+        else
+          Meetings::PDF::Default::Exporter.new(meeting, opts)
+        end
     end
 
-    def write_meeting_subtitle
-      pdf.formatted_text([styles.page_subtitle.merge({ text: meeting_subtitle })])
-    end
-
-    def meeting_subtitle
-      [
-        "#{meeting_mode} (#{I18n.t("label_meeting_state_#{meeting.state}")}),",
-        "#{format_date(meeting.start_time)},",
-        format_time(meeting.start_time, include_date: false),
-        "–",
-        format_time(meeting.end_time, include_date: false)
-      ].join(" ")
-    end
+    delegate :export!, to: :template
   end
 end

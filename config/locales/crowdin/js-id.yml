@@ -1079,6 +1079,8 @@ id:
     notice_successful_delete: "Berhasil dihapus."
     notice_successful_update: "Berhasil diperbarui."
     notice_job_started: "job started."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Bad Request."
     relations:
       empty: Tidak ada yang berkaitan

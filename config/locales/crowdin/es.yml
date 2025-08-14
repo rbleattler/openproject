@@ -2403,6 +2403,7 @@ es:
           label: "Incluir descripciones"
           caption: "Esta opción añadirá una columna de descripción en formato bruto."
     your_work_packages_export: "Se están exportando paquetes de trabajo"
+    your_projects_export: "Projects are being exported"
     succeeded: "Exportación completada"
     failed: "Se ha producido un error al intentar exportar los paquetes de trabajo: %{message}"
     errors:
@@ -2939,6 +2940,7 @@ es:
   label_custom_logo: "Logotipo personalizado"
   label_custom_export_logo: "Logotipo de exportación personalizado"
   label_custom_export_cover: "Exportación personalizada de fondo de portada"
+  label_custom_export_footer: "Custom export footer image"
   label_custom_export_cover_overlay: "Fondo de portada (cobertura) de exportación personalizado"
   label_custom_export_cover_text_color: "Color del texto"
   label_custom_pdf_export_settings: "Ajustes personalizados de exportación PDF"
@@ -4190,6 +4192,8 @@ es:
     Este es el logotipo que aparece en sus exportaciones PDF. Tiene que ser un archivo de imagen PNG o JPEG. Se recomienda un logotipo negro o de color sobre fondo transparente o blanco.
   text_custom_export_cover_instructions: >
     Esta es la imagen que aparece en el fondo de una página de portada en sus exportaciones PDF. Tiene que ser un archivo de imagen PNG o JPEG de aproximadamente un ancho 800px por 500px de alto.
+  text_custom_export_footer_instructions: >
+    PDF exports will include a graphical element positioned to the left of the footer. This image must be a PNG or JPEG file with approximately 200 pixels in width.
   text_custom_favicon_instructions: >
     Es el icono diminuto que aparece en la ventana o pestaña del navegador, junto al título de la página. Tiene que ser una imagen PNG cuadrada de 32 × 32 píxeles con un fondo transparente.
   text_custom_touch_icon_instructions: >

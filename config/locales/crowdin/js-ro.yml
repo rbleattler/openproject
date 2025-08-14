@@ -1080,6 +1080,8 @@ ro:
     notice_successful_delete: "Ştergere reuşită."
     notice_successful_update: "Actualizare reușită."
     notice_job_started: "munca începută."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Cerere invalidă."
     relations:
       empty: Nu există relații

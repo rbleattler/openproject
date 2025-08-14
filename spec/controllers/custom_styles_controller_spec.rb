@@ -354,6 +354,66 @@ RSpec.describe CustomStylesController do
       end
     end
 
+    describe "#export_footer_download" do
+      before do
+        allow(CustomStyle).to receive(:current).and_return(custom_style)
+        allow(controller).to receive(:send_file) { controller.head 200 }
+        get :export_footer_download, params: { digest: "1234", filename: "export_footer_image.png" }
+      end
+
+      context "when export cover is present" do
+        let(:custom_style) { build(:custom_style_with_export_footer) }
+
+        it "sends a file" do
+          expect(response).to have_http_status(:ok)
+        end
+      end
+
+      context "when no custom style is present" do
+        let(:custom_style) { nil }
+
+        it "renders with error" do
+          expect(controller).not_to have_received(:send_file)
+          expect(response).to have_http_status(:not_found)
+        end
+      end
+
+      context "when no export cover is present" do
+        let(:custom_style) { build_stubbed(:custom_style) }
+
+        it "renders with error" do
+          expect(controller).not_to have_received(:send_file)
+          expect(response).to have_http_status(:not_found)
+        end
+      end
+    end
+
+    describe "#export_footer_delete", with_ee: %i[define_custom_style] do
+      let(:custom_style) { create(:custom_style_with_export_footer) }
+
+      context "if it exists" do
+        before do
+          allow(CustomStyle).to receive(:current).and_return(custom_style)
+          delete :export_footer_delete
+        end
+
+        it "removes the export cover from custom_style" do
+          expect(response).to redirect_to(action: :show)
+        end
+      end
+
+      context "if it does not exist" do
+        before do
+          allow(CustomStyle).to receive(:current).and_return(nil)
+          delete :export_footer_delete
+        end
+
+        it "renders 404" do
+          expect(response).to have_http_status :not_found
+        end
+      end
+    end
+
     describe "#favicon_download" do
       before do
         allow(CustomStyle).to receive(:current).and_return(custom_style)

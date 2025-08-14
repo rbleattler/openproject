@@ -1080,6 +1080,8 @@ es:
     notice_successful_delete: "Eliminación exitosa."
     notice_successful_update: "Actualización exitosa."
     notice_job_started: "trabajo iniciado."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Petición incorrecta."
     relations:
       empty: No existen relaciones

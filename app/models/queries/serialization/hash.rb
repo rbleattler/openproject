@@ -36,6 +36,7 @@ module Queries
       class_methods do
         def from_hash(hash) # rubocop:disable Metrics/AbcSize
           new(user: hash[:user]).tap do |query|
+            query.name = hash[:name] if hash[:name].present?
             query.add_filters hash[:filters] if hash[:filters].present?
             query.add_orders hash[:orders] if hash[:orders].present?
             query.group hash[:group_by] if hash[:group_by].present?
@@ -50,7 +51,8 @@ module Queries
           orders: orders.map { |o| [o.attribute, o.direction] },
           group_by: respond_to?(:group_by) ? group_by : nil,
           selects: selects.map(&:attribute),
-          user:
+          user:,
+          name:
         }
       end
 

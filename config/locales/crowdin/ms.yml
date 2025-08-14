@@ -2360,6 +2360,7 @@ ms:
           label: "Sertakan penerangan"
           caption: "Pilihan ini akan menambah lajur penerangan dalam format mentah."
     your_work_packages_export: "Pakej kerja sedang dieksport"
+    your_projects_export: "Projects are being exported"
     succeeded: "Eksport selesai"
     failed: "Ralat telah berlaku semasa cuba mengeksport pakej kerja: %{message}"
     errors:
@@ -2896,6 +2897,7 @@ ms:
   label_custom_logo: "Logo tersuai"
   label_custom_export_logo: "Logo eksport tersuai"
   label_custom_export_cover: "Latar belakang penutup eksport tersuai"
+  label_custom_export_footer: "Custom export footer image"
   label_custom_export_cover_overlay: "Lapisan latar belakang penutup eksport tersuai"
   label_custom_export_cover_text_color: "Warna teks"
   label_custom_pdf_export_settings: "Tetapan eksport PDF tersuai"
@@ -4145,6 +4147,8 @@ ms:
     Ini merupakan logo yang akan muncul dalam eksport PDF anda. Ia perlu menjadi fail imej PNG atau JPEG. Logo hitam atau bewarna pada latar belakang telus atau putih disarankan.
   text_custom_export_cover_instructions: >
     Ini merupakan imej yang akan muncul pada latar belakang muka hadapan eksport PDF anda. Ia perlu menjadi fail imej PNG atau JPEG berukuran kira-kira 800px lebar dan 500px tinggi.
+  text_custom_export_footer_instructions: >
+    PDF exports will include a graphical element positioned to the left of the footer. This image must be a PNG or JPEG file with approximately 200 pixels in width.
   text_custom_favicon_instructions: >
     ini ialah ikon kecil yang akan dipaparkan di tetingkap pelayar/tab di sebelah tajuk halaman tersebut. Ia perlulah menggunakan fail imej PNG yang bersaiz 32 kali 32 piksel kuasa dua bersertaan latar belakang telus.
   text_custom_touch_icon_instructions: >

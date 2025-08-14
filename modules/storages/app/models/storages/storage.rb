@@ -115,6 +115,12 @@ module Storages
         OAuthClientToken.exists?(user:, oauth_client:)
     end
 
+    # For the time being, all Storages support OAuth redirect.
+    # If a storage does not support OAuth redirect, it should override this method.
+    def supports_oauth_redirect?
+      true
+    end
+
     def health_notifications_should_be_sent?
       # it is a fallback for already created storages without health_notifications_enabled configured.
       (health_notifications_enabled.nil? && automatic_management_enabled?) || health_notifications_enabled?

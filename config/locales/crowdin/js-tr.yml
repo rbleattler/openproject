@@ -1080,6 +1080,8 @@ tr:
     notice_successful_delete: "Silme başarılı."
     notice_successful_update: "Güncelleme başarılı."
     notice_job_started: "görev başlatıldı."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Hatalı istek."
     relations:
       empty: İlişki bulunmuyor

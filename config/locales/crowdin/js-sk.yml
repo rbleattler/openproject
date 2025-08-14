@@ -1082,6 +1082,8 @@ sk:
     notice_successful_delete: "Úspešne zmazané."
     notice_successful_update: "Úspešne aktualizované."
     notice_job_started: "job started."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Nesprávna požiadavka."
     relations:
       empty: Neexistuje žiadna väzba

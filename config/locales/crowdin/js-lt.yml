@@ -1082,6 +1082,8 @@ lt:
     notice_successful_delete: "Sėkmingas panaikinimas."
     notice_successful_update: "Sėkmingai atnaujinta."
     notice_job_started: "darbas pradėtas."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Netinkama užklausa."
     relations:
       empty: Nėra jokių ryšių

@@ -1079,6 +1079,8 @@ hu:
     notice_successful_delete: "Sikeres törlés."
     notice_successful_update: "Sikeres frissítés."
     notice_job_started: "elkezdődött a munka.\n"
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Rossz kérés."
     relations:
       empty: Nincs kapcsolata

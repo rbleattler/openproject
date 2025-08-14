@@ -676,7 +676,7 @@ zh-TW:
         excluded_from_totals: "不包括在總計中"
   themes:
     dark: "深色主題"
-    dark_high_contrast: "Dark high contrast"
+    dark_high_contrast: "深色高對比模式"
     light: "白色主題"
     light_high_contrast: "高對比白色主題"
     sync_with_os: "自動（匹配 OS 顏色模式）"
@@ -1857,7 +1857,7 @@ zh-TW:
   button_duplicate: "複本"
   button_duplicate_and_follow: "複製並追蹤"
   button_edit: "編輯"
-  button_edit_associated_wikipage: "Edit associated wiki page: %{page_title}"
+  button_edit_associated_wikipage: "編輯關聯的維基頁面：%{page_title}"
   button_expand_all: "全部展開"
   button_favorite: "收藏"
   button_filter: "篩選條件"
@@ -2358,6 +2358,7 @@ zh-TW:
           label: "包含說明"
           caption: "此選項會在原始格式新增說明欄位。"
     your_work_packages_export: "正在匯出工作套件"
+    your_projects_export: "Projects are being exported"
     succeeded: "匯出完成"
     failed: "嘗試匯出工作套件時發生錯誤： %{message}"
     errors:
@@ -2422,11 +2423,11 @@ zh-TW:
       tesseract: "Tesseract 可用 (非必要)"
   filterable_tree_view:
     filter_mode:
-      all: "All"
-      label: "Filter mode"
-      selected: "Selected"
-    include_sub_items: "Include sub-items"
-    no_results_text: "No results"
+      all: "全部"
+      label: "篩選模式"
+      selected: "已選取"
+    include_sub_items: "包含子項目"
+    no_results_text: "查無結果"
   general_csv_decimal_separator: "."
   general_csv_encoding: "UTF-8"
   general_csv_separator: ","
@@ -2894,6 +2895,7 @@ zh-TW:
   label_custom_logo: "自訂logo"
   label_custom_export_logo: "客製匯出的Logo"
   label_custom_export_cover: "自訂匯出封面背景圖"
+  label_custom_export_footer: "Custom export footer image"
   label_custom_export_cover_overlay: "自訂匯出封面背景色"
   label_custom_export_cover_text_color: "文字顏色"
   label_custom_pdf_export_settings: "匯出PDF設定"
@@ -4142,6 +4144,8 @@ zh-TW:
     這是出現在 PDF 匯出中的Logo。 它必須是 PNG 或 JPEG 影像檔。 建議在透明或白色背景上使用黑色或彩色標誌。
   text_custom_export_cover_instructions: >
     這是出現在 PDF 匯出的封面背景中的圖像。 它需要是大約 800 像素寬 x 500 像素高大小的 PNG 或 JPEG 影像檔案。
+  text_custom_export_footer_instructions: >
+    PDF exports will include a graphical element positioned to the left of the footer. This image must be a PNG or JPEG file with approximately 200 pixels in width.
   text_custom_favicon_instructions: >
     這是顯示在您的瀏覽器視窗/標籤頁的標題旁邊的小圖示。它必需要是 32px X 32px 大小背景透明的 PNG 圖像檔。
   text_custom_touch_icon_instructions: >

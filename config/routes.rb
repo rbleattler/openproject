@@ -180,6 +180,10 @@ Rails.application.routes.draw do
       as: "custom_style_export_cover",
       constraints: { filename: /[^\/]*/ }
 
+  get "custom_style/:digest/export_footer/:filename" => "custom_styles#export_footer_download",
+      as: "custom_style_export_footer",
+      constraints: { filename: /[^\/]*/ }
+
   get "custom_style/:digest/favicon/:filename" => "custom_styles#favicon_download",
       as: "custom_style_favicon",
       constraints: { filename: /[^\/]*/ }
@@ -503,6 +507,7 @@ Rails.application.routes.draw do
     delete "design/logo" => "custom_styles#logo_delete", as: "custom_style_logo_delete"
     delete "design/export_logo" => "custom_styles#export_logo_delete", as: "custom_style_export_logo_delete"
     delete "design/export_cover" => "custom_styles#export_cover_delete", as: "custom_style_export_cover_delete"
+    delete "design/export_footer" => "custom_styles#export_footer_delete", as: "custom_style_export_footer_delete"
     delete "design/favicon" => "custom_styles#favicon_delete", as: "custom_style_favicon_delete"
     delete "design/touch_icon" => "custom_styles#touch_icon_delete", as: "custom_style_touch_icon_delete"
     post "design/colors" => "custom_styles#update_colors", as: "update_design_colors"

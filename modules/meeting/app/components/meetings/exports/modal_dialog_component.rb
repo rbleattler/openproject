@@ -31,10 +31,12 @@
 module Meetings
   module Exports
     class ModalDialogComponent < ApplicationComponent
-      MODAL_ID = "op-meeting-generate-pdf-dialog"
-      GENERATE_PDF_FORM_ID = "op-meeting-generate-pdf-dialog-form"
       include OpTurbo::Streamable
       include OpPrimer::ComponentHelpers
+
+      MODAL_ID = "op-meeting-export-pdf-dialog"
+      MEETING_PDF_EXPORT_FORM_ID = "op-meeting-pdf-export-dialog-form"
+
       attr_reader :meeting, :project
 
       def initialize(meeting:, project:)
@@ -44,8 +46,35 @@ module Meetings
         @project = project
       end
 
+      def templates_options
+        [
+          {
+            id: "default",
+            label: I18n.t("meeting.export_pdf_dialog.templates.default.label"),
+            caption: I18n.t("meeting.export_pdf_dialog.templates.default.caption")
+          },
+          {
+            id: "minutes",
+            label: I18n.t("meeting.export_pdf_dialog.templates.minutes.label"),
+            caption: I18n.t("meeting.export_pdf_dialog.templates.minutes.caption")
+          }
+        ]
+      end
+
+      def templates_default
+        templates_options[0]
+      end
+
       def default_footer_text
         @project.name
+      end
+
+      def default_author_text
+        @meeting.author&.name || User.current.name
+      end
+
+      def default_first_page_header_left_text
+        @meeting.project&.name || Setting.software_name
       end
     end
   end

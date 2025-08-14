@@ -1079,6 +1079,8 @@ ms:
     notice_successful_delete: "Pemadaman berjaya."
     notice_successful_update: "Kemas kini berjaya."
     notice_job_started: "kerja bermula."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Ralat Permintaan."
     relations:
       empty: Tiada perhubungan wujud

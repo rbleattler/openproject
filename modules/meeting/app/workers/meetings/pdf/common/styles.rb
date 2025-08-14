@@ -28,8 +28,8 @@
 # See COPYRIGHT and LICENSE files for more details.
 #++
 
-module Meetings::PDF::Styles
-  class PDFStyles
+module Meetings::PDF::Common::Styles
+  class Base
     include MarkdownToPDF::Common
     include MarkdownToPDF::StyleHelper
     include Exports::PDF::Common::Styles
@@ -45,7 +45,7 @@ module Meetings::PDF::Styles
     end
 
     def notes_markdown_margins
-      resolve_margin(@styles.dig(:work_package, :markdown_margin))
+      resolve_margin(@styles.dig(:notes, :markdown_margin))
     end
 
     def notes_markdown_styling_yml
@@ -60,15 +60,8 @@ module Meetings::PDF::Styles
       resolve_font(@styles[:heading])
     end
 
-    def heading_hr
-      {
-        color: @styles.dig(:heading, :hr, :color),
-        height: resolve_pt(@styles.dig(:heading, :hr, :height), 1)
-      }
-    end
-
-    def heading_hr_margins
-      resolve_margin(@styles.dig(:heading, :hr))
+    def heading_margins
+      resolve_margin(@styles[:heading])
     end
 
     def agenda_item_title_margins
@@ -111,21 +104,6 @@ module Meetings::PDF::Styles
       resolve_font(@styles.dig(:agenda_item, :subtitle))
     end
 
-    def agenda_item_hr
-      {
-        color: @styles.dig(:agenda_item, :hr, :color),
-        height: resolve_pt(@styles.dig(:agenda_item, :hr, :height), 1)
-      }
-    end
-
-    def agenda_item_margins
-      resolve_margin(@styles.dig(:agenda_item, :hr))
-    end
-
-    def heading_margins
-      resolve_margin(@styles[:heading])
-    end
-
     def participants_table_cell
       resolve_table_cell(@styles.dig(:participants, :cell))
     end
@@ -161,15 +139,5 @@ module Meetings::PDF::Styles
     def agenda_section_title_cell
       resolve_table_cell(@styles.dig(:agenda_section, :title_cell))
     end
-  end
-
-  def styles
-    @styles ||= PDFStyles.new(styles_asset_path)
-  end
-
-  private
-
-  def styles_asset_path
-    File.dirname(File.expand_path(__FILE__))
   end
 end

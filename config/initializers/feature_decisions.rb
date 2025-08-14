@@ -56,3 +56,7 @@ OpenProject::FeatureDecisions.add :scim_api,
 
 OpenProject::FeatureDecisions.add :block_note_editor,
                                   description: "Enables the block note editor for rich text fields where available."
+
+OpenProject::FeatureDecisions.add :minutes_styling_meeting_pdf,
+                                  description: "Allow exporting a meeting with FITKO styling. " \
+                                               "See #65124 for details."

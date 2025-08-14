@@ -28,44 +28,31 @@
 # See COPYRIGHT and LICENSE files for more details.
 #++
 
-module Meetings::PDF
+module Meetings::PDF::Common
   class Exporter < ::Exports::Exporter
     include Exports::PDF::Common::Common
     include Exports::PDF::Common::Logo
     include Exports::PDF::Common::Markdown
     include Exports::PDF::Common::Attachments
-    include Exports::PDF::Common::Badge
     include Exports::PDF::Common::Macro
     include Exports::PDF::Components::Page
-    include Exports::PDF::Components::Cover
-    include Meetings::PDF::Styles
-    include Meetings::PDF::PageHead
-    include Meetings::PDF::Participants
-    include Meetings::PDF::Agenda
-    include Meetings::PDF::Attachments
-
-    attr_accessor :pdf
 
     self.model = Meeting
 
     alias :meeting :object
 
+    attr_accessor :pdf
+
     def self.key
       :pdf
     end
 
-    def initialize(meeting, options = {})
+    def initialize(meeting, options)
       super(meeting, options[:options] || options)
       @total_page_nr = nil
       @page_count = 0
 
       setup_page!
-    end
-
-    def setup_page!
-      self.pdf = get_pdf
-      pdf.title = heading
-      configure_page_size!(:portrait)
     end
 
     def export!
@@ -76,30 +63,16 @@ module Meetings::PDF
       error(I18n.t(:error_pdf_failed_to_export, error: e.message))
     end
 
-    def render_doc
-      write_cover_page! if with_cover?
-      render_meeting!
-    end
-
-    def render_meeting!
-      write_page_head
-      write_participants if with_participants?
-      write_agenda
-      write_attachments_list if with_attachments_list?
-      write_backlog if with_backlog?
-      write_headers!
-      write_footers!
+    def setup_page!
+      self.pdf = get_pdf
+      pdf.title = heading
+      configure_page_size!(:portrait)
     end
 
     def write_heading(text)
-      pdf.formatted_text([styles.heading.merge({ text: })])
-      pdf.move_down(10)
-    end
-
-    def write_hr
-      hr_style = styles.heading_hr
-      with_vertical_margin(styles.heading_hr_margins) do
-        write_horizontal_line(pdf.cursor, hr_style[:height], hr_style[:color])
+      style = styles.heading
+      with_vertical_margin(styles.heading_margins) do
+        pdf.formatted_text([style.merge({ text: })], style)
       end
     end
 
@@ -137,10 +110,6 @@ module Meetings::PDF
       meeting.project&.name || ""
     end
 
-    def footer_title
-      options[:footer_text] || project_title
-    end
-
     def title_datetime
       meeting.start_time.strftime("%Y-%m-%d")
     end
@@ -149,24 +118,8 @@ module Meetings::PDF
       build_pdf_filename(meeting.title)
     end
 
-    def with_participants?
-      ActiveModel::Type::Boolean.new.cast(options[:participants])
-    end
-
-    def with_attachments_list?
-      ActiveModel::Type::Boolean.new.cast(options[:attachments])
-    end
-
-    def with_backlog?
-      ActiveModel::Type::Boolean.new.cast(options[:backlog])
-    end
-
     def with_outcomes?
       ActiveModel::Type::Boolean.new.cast(options[:outcomes])
-    end
-
-    def with_cover?
-      true
     end
 
     def with_images?

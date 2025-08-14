@@ -2362,6 +2362,7 @@ ko:
           label: "설명 포함"
           caption: "이 옵션은 원시 형식으로 설명 열을 추가합니다."
     your_work_packages_export: "작업 패키지를 내보내는 중입니다."
+    your_projects_export: "Projects are being exported"
     succeeded: "내보내기 완료"
     failed: "작업 패키지를 내보내려는 중에 오류가 발생했습니다: %{message}"
     errors:
@@ -2898,6 +2899,7 @@ ko:
   label_custom_logo: "사용자 정의 로고"
   label_custom_export_logo: "사용자 지정 내보내기 로고"
   label_custom_export_cover: "사용자 지정 내보내기 커버 배경"
+  label_custom_export_footer: "Custom export footer image"
   label_custom_export_cover_overlay: "사용자 지정 내보내기 커버 배경 오버레이"
   label_custom_export_cover_text_color: "텍스트 색상"
   label_custom_pdf_export_settings: "사용자 지정 PDF 내보내기 설정"
@@ -4145,6 +4147,8 @@ ko:
     PDF 내보내기에서 표시되는 로고입니다. PNG 또는 JPEG 이미지 파일이어야 합니다. 투명 또는 흰색 바탕에 검은색 또는 컬러 로고를 사용하는 것이 좋습니다.
   text_custom_export_cover_instructions: >
     PDF 내보내기의 커버 페이지 배경에 나타나는 이미지입니다. 약 800px 너비, 500px 높이의 PNG 또는 JPEG 이미지 파일이어야 합니다.
+  text_custom_export_footer_instructions: >
+    PDF exports will include a graphical element positioned to the left of the footer. This image must be a PNG or JPEG file with approximately 200 pixels in width.
   text_custom_favicon_instructions: >
     페이지 제목 옆의 브라우저 창/탭에 나타나는 작은 아이콘입니다. 투명한 배경을 가진 정사각형 32x32 픽셀 크기의 PNG 이미지 파일이어야 합니다.
   text_custom_touch_icon_instructions: >

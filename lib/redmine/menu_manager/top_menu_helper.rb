@@ -55,17 +55,21 @@ module Redmine::MenuManager::TopMenuHelper
   end
 
   def render_logo
+    mode_class = "op-logo--link_high_contrast" if User.current.pref.light_high_contrast_theme?
     content_tag :div, class: "op-logo" do
-      mode_class = User.current.pref.light_high_contrast_theme? ? "op-logo--link_high_contrast" : ""
       link_to(I18n.t("label_home"),
               configurable_home_url,
-              class: "op-logo--link #{mode_class}")
+              data: { auto_theme_switcher_target: "desktopLogo" },
+              class: ["op-logo--link", mode_class].compact)
     end
   end
 
   def render_logo_icon
     mode_class = "op-logo--icon_white" unless User.current.pref.light_high_contrast_theme?
-    link_to(I18n.t("label_home"), configurable_home_url, class: ["op-logo", "op-logo--icon", "op-logo--link", mode_class])
+    link_to(I18n.t("label_home"),
+            configurable_home_url,
+            data: { auto_theme_switcher_target: "mobileLogo" },
+            class: ["op-logo", "op-logo--icon", "op-logo--link", mode_class].compact)
   end
 
   def render_waffle_menu_logo_icon

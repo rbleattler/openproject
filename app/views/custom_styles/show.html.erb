@@ -34,6 +34,7 @@ See COPYRIGHT and LICENSE files for more details.
 ) do %>
   <%= render(Admin::DesignHeaderComponent.new(tabs: design_tabs)) %>
   <%= error_messages_for "custom_style" %>
+  <% unless pdf_tab? %>
   <%= form_tag update_design_themes_path, method: :post, class: "form" do %>
     <section class="form--section">
       <fieldset class="form--fieldset">
@@ -50,6 +51,7 @@ See COPYRIGHT and LICENSE files for more details.
                               data: { test_selector: "color-theme-button", confirm: (t("admin.custom_styles.theme_warning") if @current_theme.blank?) } %>
       </fieldset>
     </section>
+  <% end %>
   <% end %>
 
   <%= render_tabs design_tabs %>

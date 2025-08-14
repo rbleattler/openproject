@@ -1079,6 +1079,8 @@ ko:
     notice_successful_delete: "삭제에 성공했습니다."
     notice_successful_update: "업데이트에 성공했습니다."
     notice_job_started: "작업이 시작되었습니다."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "잘못된 요청입니다."
     relations:
       empty: 관계가 없습니다.

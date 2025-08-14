@@ -2405,6 +2405,7 @@ tr:
           label: "Açıklamaları dahil et"
           caption: "Bu seçenek ham formatta bir açıklama sütunu ekleyecektir."
     your_work_packages_export: "İş paketleri dışa aktarılıyor"
+    your_projects_export: "Projects are being exported"
     succeeded: "Dışa aktarma tamamlandı"
     failed: "İş paketlerini dışa aktarmaya çalışırken bir hata oluştu: %{message}"
     errors:
@@ -2941,6 +2942,7 @@ tr:
   label_custom_logo: "Özel logo"
   label_custom_export_logo: "Özel dışarı aktarma logosu"
   label_custom_export_cover: "Özel dışarı aktarma kapak arka planı"
+  label_custom_export_footer: "Custom export footer image"
   label_custom_export_cover_overlay: "Özel dışarı aktarma kapak arka planı kaplaması"
   label_custom_export_cover_text_color: "Metin rengi"
   label_custom_pdf_export_settings: "Özel PDF dışa aktarma ayarları"
@@ -4191,6 +4193,8 @@ tr:
     Bu, PDF dışa aktarımlarınızda görünen logodur. Bir PNG veya JPEG görüntü dosyası olması gerekir. Şeffaf veya beyaz arka plan üzerinde siyah veya renkli bir logo önerilir.
   text_custom_export_cover_instructions: >
     Bu, PDF dışa aktarımlarınızda bir kapak sayfasının arka planında görünen görüntüdür. Yaklaşık 800 piksel genişlik ve 500 piksel yükseklik boyutunda bir PNG veya JPEG görüntü dosyası olması gerekir.
+  text_custom_export_footer_instructions: >
+    PDF exports will include a graphical element positioned to the left of the footer. This image must be a PNG or JPEG file with approximately 200 pixels in width.
   text_custom_favicon_instructions: >
     Bu, tarayıcı pencerenizde/sekmenizde sayfa başlığının yanında görünen küçük simgedir. Şeffaf bir arka plana sahip 32 x 32 piksel boyutunda kare şeklinde bir PNG görüntü dosyası olması gerekir.
   text_custom_touch_icon_instructions: >

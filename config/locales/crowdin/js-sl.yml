@@ -1081,6 +1081,8 @@ sl:
     notice_successful_delete: "Uspešen izbris."
     notice_successful_update: "Posodobitev uspela."
     notice_job_started: "job started."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Napačen zahtevek."
     relations:
       empty: Ni relacij

@@ -1082,6 +1082,8 @@ uk:
     notice_successful_delete: "Видалення успішно завершене."
     notice_successful_update: "Успішно оновлено."
     notice_job_started: "завдання почато."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Неправильний Запит."
     relations:
       empty: Немає жодних зв'язків

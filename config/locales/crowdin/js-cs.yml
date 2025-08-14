@@ -1082,6 +1082,8 @@ cs:
     notice_successful_delete: "Úspěšné odstranění."
     notice_successful_update: "Úspěšná aktualizace."
     notice_job_started: "Úloha byla zahájena"
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Chybný požadavek."
     relations:
       empty: Neexistuje žádný vztah

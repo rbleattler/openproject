@@ -297,7 +297,7 @@ zh-TW:
           "16_3":
             standard:
               new_features_html: >
-                該版本包含各種新功能和改進，例如<br> <ul class="%{list_styling_class}"> <li>UX/UI 的改進，讓外觀更現代。</li> <li>會議：可將電子郵件通知和 ICS 設為靜音。</li> <li>在「我的時間追蹤」模組中顯示正在進行的計時器。</li> <li>進度報告：以狀態為基礎的模式也會顯示完成總和的百分比。</li> <li>Nextcloud 健康檢查：顯示遺失的代幣交換功能 (企業附加元件)。</li> </ul>
+                此版本包含多項新功能與改進，例如：<br> <ul class="%{list_styling_class}"> <li>UX/UI 改進，帶來更現代化的外觀。</li> <li>會議：可選擇靜音電子郵件通知與 ICS。</li> <li>「我的時間追蹤」模組中顯示進行中的計時器。</li> <li>進度回報：在依狀態模式中也顯示「完成百分比總和」。</li> <li>Nextcloud 健康檢查：提示缺少令牌(token)交換功能（企業附加元件）。</li> </ul>
     ical_sharing_modal:
       title: "訂閱日曆"
       inital_setup_error_message: "更新資料時發生錯誤"
@@ -564,7 +564,7 @@ zh-TW:
         overdue: "逾期"
         overdue_since: "自 %{difference_in_days} 天."
         property_today: "今天"
-        property_is: "在 %{difference_in_days}中。"
+        property_is: "剩 %{difference_in_days} 天。"
         property_was: " %{difference_in_days}天前"
         property_is_deleted: "已刪除"
       center:
@@ -1078,6 +1078,8 @@ zh-TW:
     notice_successful_delete: "刪除成功"
     notice_successful_update: "更新成功"
     notice_job_started: "工作已開始"
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "錯誤的請求"
     relations:
       empty: 無關聯存在

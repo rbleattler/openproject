@@ -1080,6 +1080,8 @@ et:
     notice_successful_delete: "Kustutamine õnnestus."
     notice_successful_update: "Uuendamine õnnestus."
     notice_job_started: "job started."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Vigane päring."
     relations:
       empty: No relation exists

@@ -1079,6 +1079,8 @@ pt-BR:
     notice_successful_delete: "Excluído com sucesso"
     notice_successful_update: "Atualizado com sucesso."
     notice_job_started: "trabalho iniciado."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Requisição Inválida."
     relations:
       empty: Nenhuma relação existente

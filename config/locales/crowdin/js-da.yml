@@ -1079,6 +1079,8 @@ da:
     notice_successful_delete: "Sletning gennemført."
     notice_successful_update: "Opdatering gennemført."
     notice_job_started: "job started."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Uanvendelig anmodning."
     relations:
       empty: Ingen relationer findes

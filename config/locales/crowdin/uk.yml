@@ -2487,6 +2487,7 @@ uk:
           label: "Включити описи"
           caption: "Цей параметр додає стовпець опису в необробленому форматі."
     your_work_packages_export: "Пакет робіт експортуються"
+    your_projects_export: "Projects are being exported"
     succeeded: "Експорт завершено"
     failed: "Під час спроби експортувати пакети робіт сталася помилка: %{message}"
     errors:
@@ -3023,6 +3024,7 @@ uk:
   label_custom_logo: "Спеціальний логотип"
   label_custom_export_logo: "Користувацький логотип експорту"
   label_custom_export_cover: "Фон обкладинки експорту"
+  label_custom_export_footer: "Custom export footer image"
   label_custom_export_cover_overlay: "Накладення фону обкладинки експорту"
   label_custom_export_cover_text_color: "Колір тексту"
   label_custom_pdf_export_settings: "Налаштування експорту PDF"
@@ -4277,6 +4279,8 @@ uk:
     Це логотип з’являється, що відображається у ваших експортах PDF. Він має бути у форматі файлу зображення PNG або JPEG. Рекомендується чорний або кольоровий логотип на прозорому чи білому фоні.
   text_custom_export_cover_instructions: >
     Це зображення, що з’являється на фоні сторінки обкладинки у ваших експортах PDF. Вимоги до зображення: 800 пікс. (ширина) на 500 пікс. (висота), файл PNG або JPEG.
+  text_custom_export_footer_instructions: >
+    PDF exports will include a graphical element positioned to the left of the footer. This image must be a PNG or JPEG file with approximately 200 pixels in width.
   text_custom_favicon_instructions: >
     Це крихітний значок, який з’являється у вікні / на вкладці вашого браузера біля назви сторінки. Це має бути квадратний файл зображення 32 на 32 пікселі з прозорим фоном у форматі PNG.
   text_custom_touch_icon_instructions: >

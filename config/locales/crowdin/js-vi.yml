@@ -1079,6 +1079,8 @@ vi:
     notice_successful_delete: "Xóa thành công."
     notice_successful_update: "Cập nhật thành công."
     notice_job_started: "Công việc đã bắt đầu."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Yêu cầu không hợp lệ."
     relations:
       empty: Không có mối quan hệ nào

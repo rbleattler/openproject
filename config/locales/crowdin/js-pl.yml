@@ -1082,6 +1082,8 @@ pl:
     notice_successful_delete: "Usuwanie zakończone sukcesem."
     notice_successful_update: "Aktualizacja zakończona sukcesem."
     notice_job_started: "zadanie rozpoczęte."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Nieprawidłowe żądanie."
     relations:
       empty: Brak relacji

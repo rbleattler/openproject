@@ -219,9 +219,13 @@ class OAuthClientsController < ApplicationController
 
   # rubocop:enable Metrics/AbcSize
 
+  def oauth_integration
+    @oauth_client&.integration
+  end
+
   def redirect_user_or_admin(redirect_uri = nil)
     # This needs to be modified as soon as we support more integration types.
-    if User.current.admin && redirect_uri && (nextcloud? || one_drive? || share_point?)
+    if User.current.admin && redirect_uri && oauth_integration.try(:supports_oauth_redirect?)
       yield
     elsif redirect_uri
       flash[:error] = [t(:"oauth_client.errors.oauth_issue_contact_admin")]
@@ -229,18 +233,6 @@ class OAuthClientsController < ApplicationController
     else
       redirect_to root_url
     end
-  end
-
-  def nextcloud?
-    @oauth_client&.integration&.provider_type == ::Storages::NextcloudStorage.name
-  end
-
-  def one_drive?
-    @oauth_client&.integration&.provider_type == ::Storages::OneDriveStorage.name
-  end
-
-  def share_point?
-    @oauth_client&.integration&.provider_type == ::Storages::SharePointStorage.name
   end
 
   def get_redirect_uri

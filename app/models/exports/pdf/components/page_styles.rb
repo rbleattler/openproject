@@ -85,6 +85,10 @@ module Exports::PDF::Components::PageStyles
     resolve_font(@styles[:page_header])
   end
 
+  def page_header_width
+    @styles.dig(:page_header, :width).presence || 400
+  end
+
   def page_footer
     resolve_font(@styles[:page_footer])
   end

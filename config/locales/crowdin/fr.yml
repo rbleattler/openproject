@@ -2404,6 +2404,7 @@ fr:
           label: "Inclure des descriptions"
           caption: "Cette option permet d'ajouter une colonne de description au format brut."
     your_work_packages_export: "Les lots de travaux sont exportés"
+    your_projects_export: "Projects are being exported"
     succeeded: "Exportation terminée"
     failed: "Une erreur s'est produite lors de l'exportation des lots de travaux : %{message}"
     errors:
@@ -2940,6 +2941,7 @@ fr:
   label_custom_logo: "Logo personnalisé"
   label_custom_export_logo: "Logo d'exportation personnalisé"
   label_custom_export_cover: "Arrière-plan de la couverture d'exportation personnalisée"
+  label_custom_export_footer: "Custom export footer image"
   label_custom_export_cover_overlay: "Superposition de l'arrière-plan de la couverture d'exportation personnalisée"
   label_custom_export_cover_text_color: "Couleur du texte"
   label_custom_pdf_export_settings: "Paramètres d'exportation PDF personnalisés"
@@ -4192,6 +4194,8 @@ fr:
     Il s'agit du logo qui apparaît dans vos exportations PDF. Il doit s'agir d'un fichier image PNG ou JPEG. Un logo noir ou coloré sur fond transparent ou blanc est recommandé.
   text_custom_export_cover_instructions: >
     Il s'agit de l'image qui apparaît en arrière-plan de la page de couverture de vos exportations PDF. Elle doit être un fichier image PNG ou JPEG d'environ 800 px de largeur et 500 px de hauteur.
+  text_custom_export_footer_instructions: >
+    PDF exports will include a graphical element positioned to the left of the footer. This image must be a PNG or JPEG file with approximately 200 pixels in width.
   text_custom_favicon_instructions: >
     Il s'agit de la petite icône qui apparaît dans la fenêtre/onglet de votre navigateur à côté du titre de la page. Il doit s'agir d'une image PNG carrée de 32 pixels x 32 pixels avec un fond transparent.
   text_custom_touch_icon_instructions: >

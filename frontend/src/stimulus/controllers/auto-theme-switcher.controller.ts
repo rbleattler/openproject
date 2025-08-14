@@ -30,13 +30,23 @@
 
 import { Controller } from '@hotwired/stimulus';
 import { useMatchMedia } from 'stimulus-use';
+import { type OpTheme } from 'core-app/core/setup/globals/theme-utils';
+
+type OpThemeMode = OpTheme | 'sync_with_os';
 
 export default class AutoThemeSwitcher extends Controller {
   static values = {
     mode: String,
   };
 
-  declare readonly modeValue:string;
+  static targets = ['desktopLogo', 'mobileLogo'];
+  static classes = ['desktopLightHighContrastLogo', 'mobileWhiteLogo'];
+
+  declare readonly modeValue:OpThemeMode;
+  declare readonly desktopLogoTarget:HTMLLinkElement;
+  declare readonly mobileLogoTarget:HTMLLinkElement;
+  declare readonly desktopLightHighContrastLogoClass:string;
+  declare readonly mobileWhiteLogoClass:string;
 
   connect() {
     if (this.modeValue !== 'sync_with_os') return;
@@ -47,6 +57,16 @@ export default class AutoThemeSwitcher extends Controller {
         highContrastMode: '(prefers-contrast: more)',
       },
     });
+
+    this.applySystemTheme();
+  }
+
+  lightModeChanged():void {
+    this.applySystemTheme();
+  }
+
+  highContrastModeChanged():void {
+    this.applySystemTheme();
   }
 
   isLightMode():void {
@@ -57,7 +77,14 @@ export default class AutoThemeSwitcher extends Controller {
     window.OpenProject.theme.applyThemeToBody('dark');
   }
 
-  highContrastModeChanged():void {
+  private applySystemTheme():void {
     window.OpenProject.theme.applySystemThemeImmediately();
+    this.updateOpLogoContrast();
+  }
+
+  private updateOpLogoContrast():void {
+    const prefersSystemLightHighContrast = window.OpenProject.theme.prefersSystemLightHighContrast();
+    this.desktopLogoTarget.classList.toggle(this.desktopLightHighContrastLogoClass, prefersSystemLightHighContrast);
+    this.mobileLogoTarget.classList.toggle(this.mobileWhiteLogoClass, !prefersSystemLightHighContrast);
   }
 }

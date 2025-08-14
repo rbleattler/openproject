@@ -2358,6 +2358,7 @@ zh-CN:
           label: "包含描述"
           caption: "该选项将添加原始格式的描述列。"
     your_work_packages_export: "正在导出工作包"
+    your_projects_export: "Projects are being exported"
     succeeded: "导出完成"
     failed: "在尝试导出工作包时发生错误： %{message}"
     errors:
@@ -2894,6 +2895,7 @@ zh-CN:
   label_custom_logo: "自定义徽标"
   label_custom_export_logo: "自定义导出徽标"
   label_custom_export_cover: "自定义导出封面背景"
+  label_custom_export_footer: "Custom export footer image"
   label_custom_export_cover_overlay: "自定义导出封面背景叠加"
   label_custom_export_cover_text_color: "文本颜色"
   label_custom_pdf_export_settings: "自定义 PDF 导出设置"
@@ -4139,6 +4141,8 @@ zh-CN:
     这是在 PDF 导出文件中显示的徽标。它需要为 PNG 或 JPEG 图像文件。建议使用带有透明或白色背景的黑色或彩色徽标。
   text_custom_export_cover_instructions: >
     这是在您的 PDF 导出的封面页面背景中显示的图像。 它需要是大约800像素宽度 × 500像素高度的 PNG 或 JPEG 图像文件。
+  text_custom_export_footer_instructions: >
+    PDF exports will include a graphical element positioned to the left of the footer. This image must be a PNG or JPEG file with approximately 200 pixels in width.
   text_custom_favicon_instructions: >
     这是显示在浏览器窗口/选项卡中页面标题旁边的小图标。它是具有透明背景，大小为 32x32 像素的正方形 PNG 图像文件。
   text_custom_touch_icon_instructions: >

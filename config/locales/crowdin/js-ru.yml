@@ -1081,6 +1081,8 @@ ru:
     notice_successful_delete: "Удаление завершено."
     notice_successful_update: "Обновление завершено"
     notice_job_started: "задание начато."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Неверный запрос."
     relations:
       empty: Отношений не существует

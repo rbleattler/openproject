@@ -118,6 +118,22 @@ module Exports::PDF::Common::Common
     end
   end
 
+  def draw_header_text_multiline_left(text:, text_style:, available_width:, top:, max_lines:)
+    lines = wrap_to_lines(text, available_width, text_style, max_lines)
+    starting_position = top
+    lines.each do |line|
+      starting_position -= draw_text_multiline_part(line, text_style, 0, starting_position)
+    end
+  end
+
+  def draw_footer_text_multiline_left(text:, text_style:, available_width:, top:, max_lines:)
+    lines = wrap_to_lines(text, available_width, text_style, max_lines)
+    starting_position = top
+    lines.reverse_each do |line|
+      starting_position += draw_text_multiline_part(line, text_style, 0, starting_position)
+    end
+  end
+
   def formatted_text_box_measured(formatted_text_array, options)
     features_box = ::Prawn::Text::Formatted::Box.new(formatted_text_array, options.merge({ document: pdf }))
     features_box.render
@@ -128,7 +144,7 @@ module Exports::PDF::Common::Common
     previous_color = pdf.stroke_color
     previous_line_width = pdf.line_width
     @pdf.stroke do
-      pdf.stroke_color = color
+      pdf.stroke_color = color if color
       pdf.line_width = height
       pdf.horizontal_line left, right, at: top
     end
@@ -141,6 +157,7 @@ module Exports::PDF::Common::Common
     @pdf.save_font do
       @pdf.font(opts[:font], opts) if opts[:font]
       @pdf.fill_color = opts[:color] if opts[:color]
+      opts[:style] = opts[:styles][0] if opts[:styles]
       @pdf.draw_text(text, opts)
     end
     pdf.fill_color = color_before
@@ -298,6 +315,10 @@ module Exports::PDF::Common::Common
 
   def current_page_nr
     pdf.page_number + @page_count - (with_cover? ? 1 : 0)
+  end
+
+  def total_page_nr
+    @total_page_nr - (with_cover? ? 1 : 0) if @total_page_nr
   end
 
   def write_horizontal_line(y_position, height, color, left_padding: 0)

@@ -157,10 +157,10 @@ ro:
   label_all_meetings: "All meetings"
   label_upcoming_meetings: "Upcoming meetings"
   label_past_meetings: "Past meetings"
-  label_upcoming_meetings_short: "Upcoming"
-  label_past_meetings_short: "Past"
+  label_upcoming_meetings_short: "Viitoare"
+  label_past_meetings_short: "Trecute"
   label_involvement: "Implicare"
-  label_invitations: "Invitations"
+  label_invitations: "Invitații"
   label_invited_user: "Utilizator invitat"
   label_past_invitations: "Invitații anterioare"
   label_attended: "Participat"
@@ -187,8 +187,8 @@ ro:
       agenda: "Copiază agenda"
       agenda_items: "Copy agenda items"
       agenda_text: "Copy the agenda of the old meeting"
-      participants: "Copy list of participants"
-      to_clipboard: "Copy to clipboard"
+      participants: "Copiază lista cu participanți"
+      to_clipboard: "Copiază în clipboard"
     email:
       send_emails: "Email participants"
       send_invitation_emails: >
@@ -246,9 +246,29 @@ ro:
     label_export_pdf: "Exportă PDF"
     export:
       your_meeting_export: "Se exportă întâlnirea"
+      minutes:
+        footer_page_numbers: "P. %{current_page} of %{total_pages}"
+        author: "Author"
+        date: "Date"
+        time: "Time"
+        location: "Location"
+        title: "Minutes"
     export_pdf_dialog:
       title: Exportă PDF
       description: Generează un fișier PDF printabil pentru aceasta întâlnire in starea curenta.
+      templates:
+        default:
+          label: Default
+          caption: The default template is suitable for most meetings and represent the current state.
+        minutes:
+          label: Minutes
+          caption: The minutes template is suitable for closed and archived meetings.
+      first_page_header_left:
+        label: First page header left
+        caption: This text will appear on the first page at the left of the header.
+      author:
+        label: Author
+        caption: The author of the minutes will be displayed in the subtitle.
       include_participants:
         label: Include list of participants
         caption: A list of participants will be preset above the meeting agenda.
@@ -282,8 +302,8 @@ ro:
           disable: >
             Participants will no longer receive updated calendar invites via email when there are changes to the meeting date, time, location or participants. If they already had an invite for this meeting, it might no longer be accurate.
         confirm_label:
-          enable: "Enable email updates"
-          disable: "Disable email updates"
+          enable: "Activează actualizările prin e-mail"
+          disable: "Dezactivează actualizările prin e-mail"
       banner:
         onetime:
           enabled: >
@@ -433,7 +453,7 @@ ro:
   label_agenda_item_deleted_wp: "Deleted work package reference"
   label_agenda_item_actions: "Agenda items actions"
   label_agenda_item_move_to_next_title: "Move to next meeting?"
-  label_agenda_item_move: "Move"
+  label_agenda_item_move: "Mută"
   label_agenda_item_move_to_next: "Move to next meeting"
   label_agenda_item_move_to_backlog: "Move to backlog"
   label_agenda_item_move_to_current_meeting: "Move to current meeting"
@@ -446,7 +466,7 @@ ro:
   label_agenda_item_work_package_add: "Add work package"
   label_agenda_item_work_package: "Agenda item work package"
   label_section_rename: "Rename section"
-  label_agenda_outcome: "Outcome"
+  label_agenda_outcome: "Rezultat"
   label_agenda_outcome_actions: "Agenda outcome actions"
   label_agenda_outcome_edit: "Edit outcome"
   label_agenda_outcome_delete: "Remove outcome"

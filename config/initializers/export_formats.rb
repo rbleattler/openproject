@@ -50,12 +50,15 @@ Rails.application.configure do |application|
       formatter WorkPackage, WorkPackage::Exports::Formatters::SpentUnits
 
       list Project, Projects::Exports::CSV
+      list Project, Projects::Exports::PDF
       formatter Project, Exports::Formatters::CustomField
       formatter Project, Exports::Formatters::CustomFieldPdf
       formatter Project, Projects::Exports::Formatters::Status
       formatter Project, Projects::Exports::Formatters::Description
       formatter Project, Projects::Exports::Formatters::Public
       formatter Project, Projects::Exports::Formatters::Active
+      formatter Project, Projects::Exports::Formatters::Favored
+      formatter Project, Projects::Exports::Formatters::RequiredDiskSpace
     end
   end
 end

@@ -1080,6 +1080,8 @@ fr:
     notice_successful_delete: "Suppression réussie."
     notice_successful_update: "Mise à jour réussie."
     notice_job_started: "tâche démarrée."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Mauvaise requête."
     relations:
       empty: Aucune relation n'existe

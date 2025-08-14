@@ -93,12 +93,6 @@ RSpec.describe "Tabs navigation and content switching on the admin/design page" 
       click_on "PDF export styles"
       expect(page).to have_current_path custom_style_path(tab: "pdf_export_styles")
 
-      # select a color theme and redirect to the PDF export styles tab
-      select("OpenProject (default)", from: "theme")
-      find("[data-test-selector='color-theme-button']").click
-      expect_flash(message: I18n.t(:notice_successful_update))
-      expect(page).to have_current_path custom_style_path(tab: "pdf_export_styles")
-
       # change export cover text color and redirect to the PDF export styles tab
       fill_in "export_cover_text_color", with: "#333"
       find("[data-test-selector='text-color-change']").click

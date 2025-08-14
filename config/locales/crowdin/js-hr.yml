@@ -1081,6 +1081,8 @@ hr:
     notice_successful_delete: "Brisanje uspješno."
     notice_successful_update: "Ažuriranje je uspješno završeno."
     notice_job_started: "job started."
+    no_job_id: "No job ID returned from server."
+    invalid_job_response: "Invalid response from server."
     notice_bad_request: "Neispravan zahtjev."
     relations:
       empty: Relacija ne postoji

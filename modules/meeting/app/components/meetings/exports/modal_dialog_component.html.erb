@@ -16,10 +16,48 @@
             action: "submit->meetings--export--form#submitForm",
             "meetings--export--form-job-status-dialog-url-value": job_status_dialog_path("_job_uuid_")
           },
-          id: GENERATE_PDF_FORM_ID
+          id: MEETING_PDF_EXPORT_FORM_ID
         ) do
       flex_layout do |modal_body|
-        modal_body.with_row do
+        if OpenProject::FeatureDecisions.minutes_styling_meeting_pdf_active?
+          modal_body.with_row do
+            render(
+              Primer::Alpha::RadioButtonGroup.new(
+                full_width: true,
+                name: "template",
+                label: I18n.t("pdf_generator.dialog.templates.label")
+              )
+            ) do |component|
+              component.radio_button(
+                label: I18n.t("meeting.export_pdf_dialog.templates.default.label"),
+                caption: I18n.t("meeting.export_pdf_dialog.templates.default.caption"),
+                value: "default",
+                data: {
+                  "meetings--export--form-name-param": "default",
+                  action: "change->meetings--export--form#templatesChanged"
+                },
+                checked: true
+              )
+              component.radio_button(
+                label: I18n.t("meeting.export_pdf_dialog.templates.minutes.label"),
+                caption: I18n.t("meeting.export_pdf_dialog.templates.minutes.caption"),
+                value: "minutes",
+                data: {
+                  "meetings--export--form-name-param": "minutes",
+                  action: "change->meetings--export--form#templatesChanged"
+                }
+              )
+            end
+          end
+        end
+        modal_body.with_row(
+          mt: 3,
+          data: {
+            template: "default",
+            "meetings--export--form-target": "inputGroups"
+          },
+          classes: templates_default[:id] == "default" ? nil : "d-none",
+        ) do
           render(
             Primer::Alpha::CheckBox.new(
               id: "pdf_include_participants",
@@ -31,7 +69,14 @@
             )
           )
         end
-        modal_body.with_row(mt: 3) do
+        modal_body.with_row(
+          mt: 3,
+          data: {
+            template: "default",
+            "meetings--export--form-target": "inputGroups"
+          },
+          classes: templates_default[:id] == "default" ? nil : "d-none",
+        ) do
           render(
             Primer::Alpha::CheckBox.new(
               id: "pdf_include_attachments",
@@ -43,7 +88,14 @@
             )
           )
         end
-        modal_body.with_row(mt: 3) do
+        modal_body.with_row(
+          mt: 3,
+          data: {
+            template: "default",
+            "meetings--export--form-target": "inputGroups"
+          },
+          classes: templates_default[:id] == "default" ? nil : "d-none",
+        ) do
           render(
             Primer::Alpha::CheckBox.new(
               id: "pdf_include_backlog",
@@ -67,10 +119,55 @@
             )
           )
         end
-        modal_body.with_row(mt: 3) do
+        if OpenProject::FeatureDecisions.minutes_styling_meeting_pdf_active?
+          modal_body.with_row(
+            data: {
+              template: "minutes",
+              "meetings--export--form-target": "inputGroups"
+            },
+            classes: templates_default[:id] == "minutes" ? nil : "d-none",
+            mt: 3
+          ) do
+            render Primer::Alpha::TextField.new(
+              id: "pdf_header_left",
+              name: :first_page_header_left,
+              label: I18n.t("meeting.export_pdf_dialog.first_page_header_left.label"),
+              caption: I18n.t("meeting.export_pdf_dialog.first_page_header_left.caption"),
+              input_width: :large,
+              visually_hide_label: false,
+              value: default_first_page_header_left_text
+            )
+          end
+          modal_body.with_row(
+            data: {
+              template: "minutes",
+              "meetings--export--form-target": "inputGroups"
+            },
+            classes: templates_default[:id] == "minutes" ? nil : "d-none",
+            mt: 3
+          ) do
+            render Primer::Alpha::TextField.new(
+              id: "pdf_author",
+              name: :author,
+              label: I18n.t("meeting.export_pdf_dialog.author.label"),
+              caption: I18n.t("meeting.export_pdf_dialog.author.caption"),
+              input_width: :large,
+              visually_hide_label: false,
+              value: default_author_text
+            )
+          end
+        end
+        modal_body.with_row(
+          mt: 3,
+          data: {
+            template: "default",
+            "meetings--export--form-target": "inputGroups"
+          }
+        ) do
           render Primer::Alpha::TextField.new(
             id: "pdf_footer_text",
             name: :footer_text,
+            input_width: :large,
             label: I18n.t("meeting.export_pdf_dialog.footer_text.label"),
             caption: I18n.t("meeting.export_pdf_dialog.footer_text.caption"),
             visually_hide_label: false,
@@ -86,7 +183,7 @@
           Primer::Beta::Button.new(
             scheme: :primary,
             type: :submit,
-            form: GENERATE_PDF_FORM_ID,
+            form: MEETING_PDF_EXPORT_FORM_ID,
             data: {
               "close-dialog-id": MODAL_ID
             }

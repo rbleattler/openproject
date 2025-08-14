@@ -28,7 +28,7 @@
  * ++
  */
 
-export type OpTheme = 'light' | 'light_high_contrast' | 'dark';
+export type OpTheme = 'light' | 'light_high_contrast' | 'dark' | 'dark_high_contrast';
 
 export class ThemeUtils {
   public applySystemThemeImmediately():void {
@@ -37,11 +37,23 @@ export class ThemeUtils {
   }
 
   public detectSystemTheme():OpTheme {
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return this.prefersSystemLightMode() ? 'light' : 'dark';
+  }
+
+  public prefersSystemLightHighContrast():boolean {
+    return this.prefersSystemLightMode() && this.prefersSystemHighContrast();
+  }
+
+  public prefersSystemLightMode():boolean {
+    return window.matchMedia('(prefers-color-scheme: light)').matches;
+  }
+
+  public prefersSystemHighContrast():boolean {
+    return window.matchMedia('(prefers-contrast: more)').matches;
   }
 
   public applyThemeToBody(theme:OpTheme):void {
-    const increaseContrast = window.matchMedia('(prefers-contrast: more)').matches;
+    const increaseContrast = this.prefersSystemHighContrast();
     const body = document.body;
 
     switch (theme) {

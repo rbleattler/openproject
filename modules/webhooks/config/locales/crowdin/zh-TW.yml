@@ -43,7 +43,7 @@ zh-TW:
         enabled_text: 'Webhook 會針對下列定義的事件發出有效負載。'
         disabled_text: '點擊編輯按鈕以啟用 Webhook。'
       deliveries:
-        no_results_table: 在過去的幾天中，此 Webhook 未進行任何交付。
+        no_results_table: 過去幾天內，此 webhook 沒有任何傳送記錄。
         title: '最近推送記錄'
         time: '配送時間'
       form:
