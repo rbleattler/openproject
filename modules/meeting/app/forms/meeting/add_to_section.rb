@@ -78,8 +78,7 @@ class Meeting::AddToSection < ApplicationForm
   end
 
   def option_title(item)
-    return I18n.t("meeting_section.untitled_title") if item.title.blank?
-    return I18n.t("label_series_backlog") if item.backlog? && meeting.recurring?
+    return I18n.t("meeting_section.untitled_title") if item.title.blank? && !item.backlog?
 
     item.title
   end

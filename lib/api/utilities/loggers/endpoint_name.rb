@@ -28,24 +28,20 @@
 # See COPYRIGHT and LICENSE files for more details.
 #++
 
-module Users
-  module AutoLoginTokens
-    class TableComponent < ::TableComponent
-      columns :is_current, :browser, :device, :expires_on
-      sortable_columns :updated_at
-      options :current_token
+module API
+  module Utilities
+    module Loggers
+      class EndpointName < GrapeLogging::Loggers::Base
+        def parameters(request, _response)
+          name = endpoint_name(request.env["api.endpoint"])
+          name ? { endpoint_name: name } : {}
+        end
 
-      def sortable?
-        false
-      end
+        private
 
-      def headers
-        [
-          [:is_current, { caption: I18n.t("users.sessions.current") }],
-          [:browser, { caption: I18n.t("users.sessions.browser") }],
-          [:device, { caption: I18n.t("users.sessions.device") }],
-          [:expires_on, { caption: I18n.t("attributes.expires_at") }]
-        ]
+        def endpoint_name(endpoint)
+          endpoint&.options && endpoint.options[:for].to_s
+        end
       end
     end
   end

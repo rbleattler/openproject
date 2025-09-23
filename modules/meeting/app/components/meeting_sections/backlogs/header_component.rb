@@ -55,14 +55,6 @@ module MeetingSections
       @current_meeting.in_progress?
     end
 
-    def title
-      if @meeting.recurring?
-        I18n.t(:label_series_backlog)
-      else
-        I18n.t(:label_agenda_backlog)
-      end
-    end
-
     def description
       if @meeting.recurring?
         I18n.t(:text_series_backlog)

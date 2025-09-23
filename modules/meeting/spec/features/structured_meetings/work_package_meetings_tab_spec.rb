@@ -514,9 +514,27 @@ RSpec.describe "Open the Meetings tab",
             check_section_auto_selection(meeting_with_sections, "Agenda backlog")
           end
 
-          it "automatically selects the last section for recurring meeting occurrences" do
+          it "automatically selects the last section for recurring meeting occurrences that is not the series backlog" do
             last_section = recurring_meeting_occurrence.sections.last.title
             check_section_auto_selection(recurring_meeting_occurrence, last_section)
+          end
+
+          it "always has the series backlog as a manually selectable option" do
+            work_package_page.visit!
+            switch_to_meetings_tab
+
+            meetings_tab.open_add_to_meeting_dialog
+
+            fill_in("meeting_agenda_item_meeting_id", with: recurring_meeting_occurrence.title)
+            page.find(".ng-option-marked", text: recurring_meeting_occurrence.title)
+            page.find(".ng-option-marked").click
+
+            wait_for_network_idle
+
+            section_field = find_field("meeting_agenda_item_meeting_section_id")
+            section_field.click
+
+            expect(page).to have_css(".ng-option", text: "Series backlog")
           end
 
           it "shows no preselection when no sections exist for recurring meeting occurrences" do

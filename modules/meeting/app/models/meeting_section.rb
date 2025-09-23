@@ -42,6 +42,12 @@ class MeetingSection < ApplicationRecord
 
   scope :backlog, -> { where(backlog: true) }
 
+  def title
+    return super unless backlog?
+
+    meeting.recurring? ? I18n.t(:label_series_backlog) : I18n.t(:label_agenda_backlog)
+  end
+
   def untitled?
     title.blank?
   end

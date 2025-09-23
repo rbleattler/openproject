@@ -47,15 +47,10 @@ RSpec.describe "SCIM API ServiceProviderConfig" do
           get "/scim_v2/ServiceProviderConfig", {}, headers
 
           response_body = JSON.parse(last_response.body)
-          expect(response_body).to include("authenticationSchemes" => [{ "description" => "https://www.openproject.org/docs/system-admin-guide/authentication/scim/#a-static-access-token",
-                                                                         "name" => "OAuth2",
-                                                                         "type" => "oauth2" },
-                                                                       { "description" => "https://www.openproject.org/docs/system-admin-guide/authentication/scim/#b-oauth-20-client-credentials",
+          expect(response_body).to include("authenticationSchemes" => [{ "description" => "Bearer Token can be obtained in 3 different ways(https://www.openproject.org/docs/system-admin-guide/authentication/scim/#step-3-choose-an-authentication-method)",
+
                                                                          "name" => "OAuth Bearer Token",
-                                                                         "type" => "oauthbearertoken" },
-                                                                       { "description" => "https://www.openproject.org/docs/system-admin-guide/authentication/scim/#c-jwt-from-identity-provider",
-                                                                         "name" => "OpenID Provider JWT",
-                                                                         "type" => "oidcjwt" }],
+                                                                         "type" => "oauthbearertoken" }],
                                            "bulk" => { "supported" => false },
                                            "changePassword" => { "supported" => false },
                                            "etag" => { "supported" => false },
@@ -86,15 +81,9 @@ RSpec.describe "SCIM API ServiceProviderConfig" do
             expect(last_response).to have_http_status(200)
             response_body = JSON.parse(last_response.body)
             expect(response_body.keys).to eq(["meta", "schemas", "authenticationSchemes"])
-            expect(response_body).to include("authenticationSchemes" => [{ "description" => "https://www.openproject.org/docs/system-admin-guide/authentication/scim/#a-static-access-token",
-                                                                           "name" => "OAuth2",
-                                                                           "type" => "oauth2" },
-                                                                         { "description" => "https://www.openproject.org/docs/system-admin-guide/authentication/scim/#b-oauth-20-client-credentials",
+            expect(response_body).to include("authenticationSchemes" => [{ "description" => "Bearer Token can be obtained in 3 different ways(https://www.openproject.org/docs/system-admin-guide/authentication/scim/#step-3-choose-an-authentication-method)",
                                                                            "name" => "OAuth Bearer Token",
-                                                                           "type" => "oauthbearertoken" },
-                                                                         { "description" => "https://www.openproject.org/docs/system-admin-guide/authentication/scim/#c-jwt-from-identity-provider",
-                                                                           "name" => "OpenID Provider JWT",
-                                                                           "type" => "oidcjwt" }],
+                                                                           "type" => "oauthbearertoken" }],
                                              "schemas" => ["urn:ietf:params:scim:schemas:core:2.0:ServiceProviderConfig"])
           end
         end

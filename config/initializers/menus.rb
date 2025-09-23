@@ -249,7 +249,7 @@ Redmine::MenuManager.map :my_menu do |menu|
   menu.push :sessions,
             { controller: "/my/sessions", action: :index },
             caption: :"users.sessions.title",
-            icon: "op-installation-services"
+            icon: "devices"
   menu.push :notifications,
             { controller: "/my", action: "notifications" },
             caption: I18n.t("js.notifications.settings.title"),

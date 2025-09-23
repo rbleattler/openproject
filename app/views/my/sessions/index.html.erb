@@ -31,6 +31,7 @@ See COPYRIGHT and LICENSE files for more details.
 <%=
   render(Primer::OpenProject::PageHeader.new) do |header|
     header.with_title { t("users.sessions.title") }
+    header.with_description { t("users.sessions.instructions") }
     header.with_breadcrumbs(
       [{ href: my_account_path, text: t(:label_my_account) },
        t("users.sessions.title")]
@@ -38,13 +39,16 @@ See COPYRIGHT and LICENSE files for more details.
   end
 %>
 
-<p><%= t("users.sessions.instructions") %></p>
+<%# Collect a “fingerprint” of each token: user_id + platform + browser %>
+<% token_fingerprints = @autologin_tokens.map { |t| [t.user_id, t.data["platform"], t.data["browser"]] } %>
 
-<%= render ::Users::Sessions::TableComponent.new(rows: @sessions, current_session: session) %>
+<%# Reject sessions that match any token fingerprint %>
+<% rows = @sessions.reject do |s|
+     token_fingerprints.include?([s.user_id, s.data["platform"], s.data["browser"]])
+   end + @autologin_tokens %>
 
-<% if Setting::Autologin.enabled? && @autologin_tokens.any? %>
-  <h3><%= t("users.sessions.remembered_devices") %></h3>
-  <p><%= t("users.sessions.remembered_devices_caption") %></p>
-
-  <%= render ::Users::AutoLoginTokens::TableComponent.new(rows: @autologin_tokens, current_token: @current_token) %>
-<% end %>
+<%= render ::Users::Sessions::TableComponent.new(
+      rows: rows,
+      current_session: session,
+      current_token: @current_token
+    ) %>

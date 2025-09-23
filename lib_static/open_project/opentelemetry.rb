@@ -121,5 +121,24 @@ module OpenProject
         span.set_attribute(key.to_s, value.to_s)
       end
     end
+
+    # Determine process type
+    def process_type # rubocop:disable Metrics/PerceivedComplexity
+      if defined?(Rails::Server)
+        "web"
+      elsif defined?(Rails::Console)
+        "console"
+      elsif defined?(Rails::Runner)
+        "runner"
+      elsif defined?(Rails::Generators)
+        "generator"
+      elsif defined?(Rake) && Rake.application.top_level_tasks.any?
+        "rake"
+      elsif defined?(GoodJob::CLI) && GoodJob::CLI.within_exec?
+        "worker"
+      else
+        "unknown"
+      end
+    end
   end
 end

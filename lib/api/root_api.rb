@@ -40,7 +40,8 @@ module API
 
     insert_before Grape::Middleware::Error,
                   ::GrapeLogging::Middleware::RequestLogger,
-                  { instrumentation_key: "openproject_grape_logger" }
+                  { instrumentation_key: "openproject_grape_logger",
+                    include: [API::Utilities::Loggers::EndpointName.new] }
 
     content_type :json, "application/json; charset=utf-8"
 

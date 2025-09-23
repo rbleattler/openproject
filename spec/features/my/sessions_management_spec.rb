@@ -42,38 +42,71 @@ RSpec.describe "My account session management", :js, :selenium do
   let!(:plain_session) { create(:user_session, user:, data: session_data) }
   let!(:user_session) { Sessions::UserSession.find_by(session_id: plain_session.session_id) }
 
-  before do
-    login_as(user)
-    # Session is inserted with now() by default, and doesn't take the data attribute
-    Sessions::UserSession.where(id: user_session.id).update_all(updated_at: 5.days.ago)
-    visit my_account_path
+  let!(:autologin_token) do
+    create(:autologin_token,
+           user:,
+           data: { browser: "Firefox", browser_version: "142", platform: "macOS" },
+           created_at: 3.days.ago,
+           expires_on: 4.days.from_now)
   end
 
-  it "can list and terminate sessions" do
+  before do
+    login_as(user)
+    Sessions::UserSession.where(id: user_session.id).update_all(updated_at: 5.days.ago)
+    visit my_account_path
     click_on "Session management"
+  end
 
+  it "can list and terminate sessions and remembered devices" do
     page.within_test_selector("Users::Sessions::TableComponent") do
-      expect(page).to have_css(".generic-table tbody tr", count: 2)
-      trs = page.all(".generic-table tbody tr")
-      expect(trs[0]).to have_css(".icon-yes")
-      expect(trs[0]).to have_text("Current session")
+      # Current session + old session + remembered device
+      expect(page).to have_css(".session-row", count: 3)
+
+      trs = page.all(".session-row")
+
+      # Current session
+      expect(trs[0]).to have_text(I18n.t("users.sessions.current"))
       expect(trs[0]).to have_text("unknown browser")
       expect(trs[0]).to have_text("unknown operating system")
-      expect(trs[0]).to have_no_css(".buttons a")
+      expect(trs[0]).to have_no_test_selector("session-revoke-button")
+
+      # Old session
       expect(trs[1]).to have_text("Mozilla Firefox (Version 12.3)")
       expect(trs[1]).to have_text("Linux")
       expect(trs[1]).to have_text format_time(old_session_time)
-      expect(trs[1]).to have_css(".buttons a")
+      expect(trs[1]).to have_test_selector("session-revoke-button")
 
-      trs[1].find(".buttons a").click
+      # Remembered device (token)
+      expect(trs[2]).to have_text("Firefox (Version 142)")
+      expect(trs[2]).to have_text("macOS")
+      expect(trs[2]).to have_text(format_time(autologin_token.created_at))
+      expect(trs[2]).to have_test_selector("session-revoke-button")
+
+      # Revoke the old session
+      within trs[1] do
+        find_test_selector("session-revoke-button").click
+      end
     end
 
     page.driver.browser.switch_to.alert.accept
 
     page.within_test_selector("Users::Sessions::TableComponent") do
-      expect(page).to have_css(".generic-table tbody tr", count: 1)
+      trs = page.all(".session-row")
+      # Revoke the remembered device
+      within trs[1] do
+        find_test_selector("session-revoke-button").click
+      end
     end
 
+    page.driver.browser.switch_to.alert.accept
+
+    page.within_test_selector("Users::Sessions::TableComponent") do
+      # Only current session remains
+      expect(page).to have_css(".session-row", count: 1)
+    end
+
+    # Both old session and token are gone
     expect { user_session.reload }.to raise_error(ActiveRecord::RecordNotFound)
+    expect { autologin_token.reload }.to raise_error(ActiveRecord::RecordNotFound)
   end
 end
