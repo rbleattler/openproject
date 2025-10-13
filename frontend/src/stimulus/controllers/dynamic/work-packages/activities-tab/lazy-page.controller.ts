@@ -120,7 +120,7 @@ export default class LazyPageController extends BaseController {
 
     const [_observe, unobserve] = useIntersection(this, {
       root,
-      threshold: 0.25,
+      threshold: 0.05,
       dispatchEvent: false
     });
 
