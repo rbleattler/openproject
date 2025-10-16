@@ -29,18 +29,18 @@
  */
 
 import { BlockNoteSchema, defaultBlockSpecs, filterSuggestionItems } from '@blocknote/core';
+import {
+    DefaultThreadStoreAuth,
+    User,
+    YjsThreadStore,
+} from '@blocknote/core/comments';
 import { BlockNoteView } from '@blocknote/mantine';
 import { getDefaultReactSlashMenuItems, SuggestionMenuController, useCreateBlockNote } from '@blocknote/react';
-import { initOpenProjectApi, getDefaultOpenProjectSlashMenuItems, openProjectWorkPackageBlockSpec } from 'op-blocknote-extensions';
-import { useEffect, useState } from 'react';
-import { OpColorMode } from 'core-app/core/setup/globals/theme-utils';
 import { HocuspocusProvider } from '@hocuspocus/provider';
+import { OpColorMode } from 'core-app/core/setup/globals/theme-utils';
+import { getDefaultOpenProjectSlashMenuItems, initOpenProjectApi, openProjectWorkPackageBlockSpec } from 'op-blocknote-extensions';
+import { useEffect, useState } from 'react';
 import * as Y from 'yjs';
-import {
-  DefaultThreadStoreAuth,
-  YjsThreadStore,
-} from '@blocknote/core/comments';
-import { User } from '@blocknote/core/comments';
 
 export interface OpBlockNoteContainerProps {
   inputField:HTMLInputElement;
@@ -56,7 +56,7 @@ export interface OpBlockNoteContainerProps {
 const schema = BlockNoteSchema.create({
   blockSpecs: {
     ...defaultBlockSpecs,
-    openProjectWorkPackage: openProjectWorkPackageBlockSpec,
+    openProjectWorkPackage: openProjectWorkPackageBlockSpec(),
   },
 });
 

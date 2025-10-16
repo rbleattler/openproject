@@ -57,7 +57,6 @@ module WorkPackages
         def wrapper_data_attributes
           {
             controller: lazy_page_stimulus_controller,
-            lazy_page_stimulus_controller("-insert-target-id-value") => wrapper_key,
             lazy_page_stimulus_controller("-page-value") => page,
             lazy_page_stimulus_controller("-url-value") => page_streams_url,
             lazy_page_stimulus_controller("-is-loaded-value") => false

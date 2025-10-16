@@ -81,21 +81,6 @@ export function initializeGlobalListeners():void {
     document.body.classList.toggle('zen-mode', event.detail.active);
   });
 
-  // Jump to the element given by location.hash, if present
-  const { hash } = window.location;
-  if (hash && hash.startsWith('#')) {
-    try {
-      const el = document.querySelector(hash);
-      el && el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } catch (e) {
-      // This is very likely an invalid selector such as a Google Analytics tag.
-      // We can safely ignore this and just not scroll in this case.
-      // Still log the error so one can confirm the reason there is no scrolling.
-      if (e instanceof Error) {
-        console.log(`Could not scroll to given location hash: ${hash} ( ${e.message})`);
-      }
-    }
-  }
   // Disable global drag & drop handling, which results in the browser loading the image and losing the page
   jQuery(document.documentElement)
     .on('dragover drop', (evt:Event) => {

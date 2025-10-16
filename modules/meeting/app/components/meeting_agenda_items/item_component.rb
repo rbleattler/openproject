@@ -54,8 +54,11 @@ module MeetingAgendaItems
       @current_occurrence = current_occurrence
     end
 
-    def wrapper_uniq_by
-      @meeting_agenda_item.id
+    ##
+    # This wrapper key is used for identifying the agenda item
+    # through anchor hashes.
+    def wrapper_key
+      "meeting-agenda-item-#{@meeting_agenda_item.id}"
     end
 
     def call
@@ -89,6 +92,7 @@ module MeetingAgendaItems
       {
         pl: 0,
         scheme: :default,
+        classes: "op-meeting-agenda-item-wrapper",
         data: {
           id: @meeting_agenda_item.id,
           "draggable-id": @meeting_agenda_item.id,

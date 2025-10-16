@@ -122,7 +122,7 @@ module Pages::Meetings
         yield
         created_id = click_save_and_wait_for_agenda_item_creation if save
       end
-      expect(page).to have_css("#meeting-agenda-items-item-component-#{created_id}") if created_id
+      expect(page).to have_css("#meeting-agenda-item-#{created_id}") if created_id
     end
 
     def expect_modal(...)
@@ -144,7 +144,7 @@ module Pages::Meetings
           yield
           created_id = click_save_and_wait_for_agenda_item_creation if save
         end
-        expect(page).to have_css("#meeting-agenda-items-item-component-#{created_id}") if created_id
+        expect(page).to have_css("#meeting-agenda-item-#{created_id}") if created_id
       end
     end
 
@@ -156,7 +156,7 @@ module Pages::Meetings
     end
 
     def in_edit_form(item, &)
-      page.within("#meeting-agenda-items-item-component-#{item.id}", &)
+      page.within("#meeting-agenda-item-#{item.id}", &)
     end
 
     def in_agenda_form(&)
@@ -200,7 +200,7 @@ module Pages::Meetings
       if item.is_a?(WorkPackage)
         expect(page).to have_css("[id^='meeting-agenda-items-item-component-']", text: item.subject)
       else
-        expect(page).to have_css("#meeting-agenda-items-item-component-#{item.id}", text: item.work_package.subject)
+        expect(page).to have_css("#meeting-agenda-item-#{item.id}", text: item.work_package.subject)
       end
     end
 
@@ -209,7 +209,7 @@ module Pages::Meetings
     end
 
     def expect_undisclosed_agenda_link(item)
-      expect(page).to have_css("#meeting-agenda-items-item-component-#{item.id}",
+      expect(page).to have_css("#meeting-agenda-item-#{item.id}",
                                text: I18n.t(:label_agenda_item_undisclosed_wp, id: item.work_package_id))
     end
 
@@ -225,12 +225,12 @@ module Pages::Meetings
 
     def expect_agenda_action_menu(item)
       expect(page)
-        .to have_css("#meeting-agenda-items-item-component-#{item.id} #{test_selector('op-meeting-agenda-actions')}")
+        .to have_css("#meeting-agenda-item-#{item.id} #{test_selector('op-meeting-agenda-actions')}")
     end
 
     def expect_no_agenda_action_menu(item)
       expect(page)
-        .to have_no_css("#meeting-agenda-items-item-component-#{item.id} #{test_selector('op-meeting-agenda-actions')}")
+        .to have_no_css("#meeting-agenda-item-#{item.id} #{test_selector('op-meeting-agenda-actions')}")
     end
 
     def select_action(item, action)
@@ -255,7 +255,7 @@ module Pages::Meetings
 
     def open_menu(item, &)
       retry_block do
-        page.within("#meeting-agenda-items-item-component-#{item.id}") do
+        page.within("#meeting-agenda-item-#{item.id}") do
           page.find_test_selector("op-meeting-agenda-actions").click
         end
         page.find(".Overlay")
@@ -280,7 +280,7 @@ module Pages::Meetings
 
     def expect_no_outcome_action(item)
       retry_block do
-        page.within("#meeting-agenda-items-item-component-#{item.id}") do
+        page.within("#meeting-agenda-item-#{item.id}") do
           page.find_test_selector("op-meeting-agenda-actions").trigger("click")
         end
         page.find(".Overlay")
@@ -395,7 +395,7 @@ module Pages::Meetings
           yield
           created_id = click_save_and_wait_for_agenda_item_creation
         end
-        expect(page).to have_css("#meeting-agenda-items-item-component-#{created_id}")
+        expect(page).to have_css("#meeting-agenda-item-#{created_id}")
       end
     end
 
@@ -675,7 +675,7 @@ module Pages::Meetings
         end
       end
 
-      page.within("#meeting-agenda-items-item-component-#{item.id}") do
+      page.within("#meeting-agenda-item-#{item.id}") do
         page.find_test_selector("op-meeting-agenda-actions").click
       end
     end
@@ -692,7 +692,7 @@ module Pages::Meetings
         end
       end
 
-      page.within("#meeting-agenda-items-item-component-#{item.id}") do
+      page.within("#meeting-agenda-item-#{item.id}") do
         page.find_test_selector("op-meeting-agenda-actions").click
       end
     end

@@ -75,6 +75,11 @@ The lifecycle of the Project Initiating Request ends with the creation of the Bu
 
 ## 5.3 Business Case 
 
+> [!TIP]
+>
+> Currently we recommend to have a task to create the Business Case. It is currently modelled as a work package. This will then be replaced by the new documents module which allow to automatically create the artefact based on the single source of truth.
+> [Example](https://pm2.openproject.com/wp/450)
+
 The purpose of the Business Case is to capture the reasoning behind the project, to describe the project's alignment with the organisation's strategic objectives, to provide a justification for the investment in time and effort, and to set out the budgetary needs. For larger strategic projects, the Business Case may also include an assessment of impact and risks along with a more detailed cost-benefit analysis.
 
 The Business Case provides decision-makers with the information they need to determine whether the project is worth doing. The Business Case is a living document and therefore should be re-examined at critical project milestones to check that the expected benefits are still achievable, the costs/schedule fall within the budget/timeline, and the project is still relevant to the organisation and should be continued.

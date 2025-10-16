@@ -1,6 +1,6 @@
 <%=
   component_wrapper do
-    grid_layout("op-meeting-agenda-item", tag: :div, id: "item-#{@meeting_agenda_item.id}") do |grid|
+    grid_layout("op-meeting-agenda-item", tag: :div) do |grid|
       if drag_and_drop_enabled?
         grid.with_area(:"drag-handle", tag: :div, classes: "hide-when-print") do
           render(Primer::OpenProject::DragHandle.new(classes: "handle"))
