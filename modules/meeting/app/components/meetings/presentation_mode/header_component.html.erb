@@ -16,6 +16,9 @@
         href: meeting_path(@meeting),
         aria: { label: t(:"meeting.presentation_mode.exit") },
         title: t(:"meeting.presentation_mode.exit"),
+        data: {
+          action: "zen-mode#deactivateZenMode"
+        }
       ) do |button|
         button.with_leading_visual_icon(icon: :x)
         t(:"meeting.presentation_mode.exit")

@@ -40,13 +40,13 @@ export default class OpZenModeController extends ApplicationController {
     window.dispatchEvent(event);
   }
 
-  private deactivateZenMode() {
+  deactivateZenMode() {
     if (document.exitFullscreen) {
       void document.exitFullscreen();
     }
   }
 
-  private activateZenMode() {
+  activateZenMode() {
     if (document.documentElement.requestFullscreen) {
       void document.documentElement.requestFullscreen();
     }

@@ -134,7 +134,7 @@ module OpenProject
         "generator"
       elsif defined?(Rake) && Rake.application.top_level_tasks.any?
         "rake"
-      elsif defined?(GoodJob::CLI) && GoodJob::CLI.within_exec?
+      elsif defined?(GoodJob::CLI) && GoodJob::CLI.within_exe?
         "worker"
       else
         "unknown"
