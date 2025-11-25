@@ -2,13 +2,13 @@ de:
   grids:
     label_widget_in_grid: "Widget im Gitter %{grid_name} enthalten"
     widgets:
-      empty: "This widget is currently empty."
-      not_available: "This widget is not available."
+      empty: "Dieses Widget ist derzeit ohne Inhalt."
+      not_available: "Dieses Widget ist nicht verfügbar."
       subitems:
         title: "Unterelemente"
         no_results: "Es gibt keine sichtbaren Kinder."
         view_all_subitems: "Alle Unterelemente anzeigen"
-        button_text: "Subitem"
+        button_text: "Unterelement"
       members:
         title: "Mitglieder"
         no_results: "Kein sichtbaren Mitglieder."
@@ -16,7 +16,7 @@ de:
         show_members_count: "Alle %{count} Mitglieder anzeigen"
         x_more:
           one: "und ein weiteres Mitglied."
-          other: "and %{count} more members."
+          other: "und %{count} weitere Mitglieder."
       news:
         no_results: "Nichts Neues zu berichten."
   activerecord:

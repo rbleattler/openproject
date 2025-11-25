@@ -311,6 +311,25 @@ it:
           zero: nessun sottoelemento
           one: 1 sottoelemento
           other: "%{count} sottoelementi"
+      role_assignment:
+        title: Role Assignment
+        description: You can automatically grant a certain project role to any user assigned to this project attribute, regardless of that user’s original role in that project.
+        warning: Depending on the role selected below, the user assigned to this project attribute might gain significantly more permissions than they previously had, including the ability to add new members and elevate their role.
+        role_field_label: "Project Role"
+        role_field_caption: This project role will automatically be granted to any user assigned to this project attribute
+        review_hint: >
+          There are %{user_count} who are already assigned to this project attribute in various projects. They might get additional permissions and be added to projects they did not previously have access to.
+        review_button: Review users and permissions
+        dialog:
+          title: "Overview of users and permissions"
+          change: Change
+          changes:
+            new_member: Will be added as a member
+            remove_member: Will be removed as a member
+            gain_and_lose_role: Will lose role ‘%{old_role}’ and gain role ‘%{new_role}’
+            gain_role: Will gain role ‘%{new_role}’
+            lose_role: Will lose role ‘%{old_role}’
+            no_change: No changes
     text_add_new_custom_field: >
       Per aggiungere nuovi campi personalizzati a un progetto, è necessario prima crearli.
     is_enabled_globally: "Abilitato a livello globale"
@@ -548,7 +567,7 @@ it:
       creation_wizard:
         export:
           description_attachment_export: "The generated artifact will be saved as a PDF attachment to the artifact work package."
-          description_file_link_export: "The artifact work package will have a file link to a PDF stored in an external file storage. Requires a working file storage with automatically-managed project folders. At the moment only Nextcloud file storages are supported."
+          description_file_link_export: "The artifact work package will have a file link to a PDF stored in an external file storage. Requires a working file storage with automatically-managed project folders for this project. At the moment only Nextcloud file storages are supported."
           description_file_storage_selection: "Select which of the configured external file storages should be used."
           external_file_storage: "External file storage"
           label_artifact_export: "Artifact export"
@@ -564,7 +583,6 @@ it:
     wizard:
       sidebar_content_title: "Content"
       sections: "Sections"
-      title: "Project initiation request"
       no_help_text: "This attribute has no help text defined."
       success: "Project attributes have been saved successfully."
       progress_label: "%{current} of %{total}"
@@ -2152,7 +2170,10 @@ it:
     copy_options:
       dependencies_label: "Copia dal progetto"
   create_project:
+    attributes_heading: "Required attributes"
+    details_heading: "Project details"
     template_label: "Usa modello"
+    template_heading: "Templated projects"
     copy_options:
       dependencies_label: "Copia da modello"
     blank_template:
@@ -2160,10 +2181,14 @@ it:
       description: Start from scratch. Manually add project attributes, members and modules.
     blank_description: No description provided.
   create_portfolio:
+    details_heading: "Portfolio details"
+    template_heading: "Templated portfolios"
     blank_template:
       label: "Blank portfolio"
       description: Start from scratch. Manually add portfolio attributes, members and modules.
   create_program:
+    details_heading: "Program details"
+    template_heading: "Templated programs"
     blank_template:
       label: "Blank program"
       description: Start from scratch. Manually add program attributes, members and modules.
@@ -2717,6 +2742,7 @@ it:
       new_features:
         header: "Informati sulle nuove funzionalità e sugli aggiornamenti dei prodotti."
         learn_about: "Scopri di più su tutte le nuove funzionalità"
+        missing: "There are no highlighted features yet."
         #We need to include the version to invalidate outdated translations in other locales
         "16_6":
           new_features_title: >
@@ -3138,7 +3164,6 @@ it:
   label_installation_guides: "Guide all'installazione"
   label_integer: "Intero"
   label_interface: "Interfaccia"
-  label_interlinked_role_assignment: "Interlinked Role Assignment"
   label_internal: "Interno"
   label_introduction_video: "Video introduttivo"
   label_invite_user: "Invita utente"
@@ -3332,6 +3357,9 @@ it:
   label_project_hierarchy: "Gerarchia del progetto"
   label_project_mappings: "Progetti"
   label_project_new: "Nuovo progetto"
+  label_project_initiation_request: "Project initiation request"
+  label_project_creation_wizard: "New project creation wizard"
+  label_project_mandate: "New project mandate"
   label_project_plural: "Progetti"
   label_project_list_plural: "Elenchi progetto"
   label_project_life_cycle: "Ciclo di vita del progetto"
@@ -3345,7 +3373,6 @@ it:
   label_project_view_all: "Vedi tutti i progetti"
   label_project_show_details: "Mostra dettagli progetto"
   label_project_hide_details: "Nascondi dettagli progetto"
-  label_project_initiation_request: "Project initiation request"
   label_portfolio: "Portfolio"
   label_portfolio_new: "Nuovo portfolio"
   label_program: "Programma"
@@ -4420,15 +4447,15 @@ it:
         confirmation_message: "The initiation request wizard will no longer be available to new projects based on this template. Project managers and project owners will need to manually configure and fill out the relevant information in the Project overview."
         checkbox_message: "I understand that this action is not reversible"
       name:
-        artefact_name: "Artefact name"
-        artefact_name_caption: "Choose the name for this artefact that your project management framework recommends."
+        artifact_name: "Artifact name"
+        artifact_name_caption: "Choose the name for this artifact that your project management framework recommends."
         options:
           project_initiation_request: "Project initiation request"
           project_creation_wizard: "Project creation wizard"
           project_mandate: "Project mandate"
       submission:
         work_package_type: "Work package type"
-        work_package_type_caption: "The work package type that should be used to store the completed artefact."
+        work_package_type_caption: "The work package type that should be used to store the completed artifact."
         status_when_submitted: "Status when submitted"
         status_when_submitted_caption: "The status the generated work package will transition to once the request is submitted."
         send_confirmation_email: "Send confirmation email to the user who submitted the project initiation request"
@@ -4714,8 +4741,6 @@ it:
     L'aggiunta di ulteriori utenti supererà il limite attuale. <a href="%{upgrade_url}">Aggiorna il tuo piano</a> per poter garantire che gli utenti esterni possano accedere a questa istanza.
   warning_user_limit_reached_instructions: >
     Raggiunto il limite di utenti (%{current}/%{max} utenti attivi). Si prega di contattare sales@openproject.com per aggiornare il tuo piano dell'edizione Enterprise e aggiungere ulteriori utenti.
-  warning_interlinking_custom_field_with_role_html: >
-    <strong>Warning:</strong> You are about to link a custom field with a role. This will give users with the "Edit Project Attributes" permission to add members to the project and they will be assigned the linked role. This may lead to privilege escalation because users can assign themselves higher privileges than intended. Please make sure you understand the implications of this action.
   warning_protocol_mismatch_html: >
 
   warning_bar:

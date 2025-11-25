@@ -27,10 +27,10 @@ zh-TW:
     errors:
       models:
         document_type:
-          one_or_more_required: "Cannot delete the last document type"
+          one_or_more_required: "無法刪除最後一個文件類型"
     models:
       document: "文件"
-      documents: "Documents"
+      documents: "文件"
     attributes:
       document:
         content_binary: "二進制內容"
@@ -55,13 +55,13 @@ zh-TW:
       heading: "尚未有任何文件"
       description: "此檢視中沒有文件。您可以點擊下面的按鈕添加一個。"
     document_categories_deprecation_notice:
-      heading: File categories are now called 'Document types'
+      heading: 檔案類別現在稱為「文件類型」
       description: |-
-        Your existing file categories have been converted to document types with the introduction of the new Documents module.
-        All existing documents have also been migrated to these new types.
-      primary_action: Configure document types
-      secondary_action: Learn more about the Documents module
-    document_type_actions: "Document type actions"
+        隨著新文件模組的推出，您現有的文件類別已轉換為文件類型。
+        所有現有的文件也已轉換成這些新的類型。
+      primary_action: 設定文件類型
+      secondary_action: 進一步瞭解文件模組
+    document_type_actions: "文件類型動作"
     index_page:
       name: "名稱"
       type: "類型"
@@ -76,23 +76,23 @@ zh-TW:
     label_attachment_author: "附件作者"
     label_categories: "類別"
     new_category: "新增類別"
-    new_type: "New type"
+    new_type: "新增種類"
     delete_dialog:
       title: "刪除文件"
       heading: "刪除此文件？"
       confirmation_message_html: "這將永久刪除本文件和所有檔案附件。您確定要這麼做？"
     delete_document_type_dialog:
-      title: Delete document type
-      heading: Delete this document type?
+      title: 刪除文件類型
+      heading: 刪除此文件類型？
       confirmation_message: |-
-        The type "%{type_name}" is currently unused. Deleting this type will have no effect on existing documents.
-      select_reassign_to_label: Reassign documents to
+        %{type_name}" 類型目前尚未使用。刪除此類型對現有文件沒有影響。
+      select_reassign_to_label: 重新分配文件至
       reassign_message:
-        other: The type "%{type_name}" is currently being used in %{document_count} documents. Please select which type to reassign them to.
+        other: 類型 "%{type_name}" 目前用於 %{document_count} 文件。請選擇將其重新指定為哪一種類型。
       at_least_one_type_required:
-        title: Cannot delete document type
-        heading: Cannot delete the last document type
-        message: There must always be at least one document type configured. Create another one first if you want to delete this one.
+        title: 無法刪除文件類型
+        heading: 無法刪除最後一個文件類型
+        message: 必須始終至少配置一個文件類型。如果要刪除此文件類型，請先建立另一個。
   label_document_added: "文件已新增"
   label_document_new: "建立新文件"
   label_document_plural: "文件"

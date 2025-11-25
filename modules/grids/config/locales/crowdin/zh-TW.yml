@@ -2,13 +2,13 @@ zh-TW:
   grids:
     label_widget_in_grid: "網格(Grid) %{grid_name} 中包含的工具集"
     widgets:
-      empty: "This widget is currently empty."
-      not_available: "This widget is not available."
+      empty: "此小工具目前為空。"
+      not_available: "此小工具無法使用。"
       subitems:
         title: "子項目"
         no_results: "沒有可見的子項目。"
         view_all_subitems: "檢視所有子項目"
-        button_text: "Subitem"
+        button_text: "子項目"
       members:
         title: "成員"
         no_results: "沒有可見的成員。"

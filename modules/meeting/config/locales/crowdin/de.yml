@@ -115,7 +115,7 @@ de:
   label_meeting_new_dynamic: "Neue einmalige Besprechung"
   label_meeting_new_recurring: "Neue Terminserie"
   label_meeting_create: "Besprechung erstellen"
-  label_meeting_duplicate: "Duplicate meeting"
+  label_meeting_duplicate: "Besprechung duplizieren"
   label_meeting_edit: "Besprechung bearbeiten"
   label_meeting_agenda: "Agenda"
   label_meeting_minutes: "Protokoll"
@@ -127,8 +127,8 @@ de:
   label_meeting_date_time: "Datum/Uhrzeit"
   label_meeting_date_and_time: "Datum und Zeit"
   label_meeting_diff: "Differenz"
-  label_meeting_send_updates: "Send email calendar invite and updates"
-  label_meeting_send_updates_caption: "Send out email invites to all participants of this meeting"
+  label_meeting_send_updates: "E-Mail-Kalender-Aktualisierungen senden"
+  label_meeting_send_updates_caption: "Versenden Sie E-Mail-Einladungen an alle Teilnehmer dieser Besprechung"
   label_recurring_meeting: "Wiederkehrende Besprechung"
   label_recurring_meeting_part_of: "Teil einer Terminserie"
   label_recurring_meeting_new: "Neue Terminserie"
@@ -136,7 +136,7 @@ de:
   label_template: "Vorlage"
   label_recurring_meeting_view: "Terminserie ansehen"
   label_recurring_meeting_create: "Öffnen"
-  label_recurring_meeting_duplicate: "Duplicate as a one-time meeting"
+  label_recurring_meeting_duplicate: "Als einmalige Besprechung duplizieren"
   label_recurring_meeting_cancel: "Diese Besprechung absagen"
   label_recurring_meeting_delete: "Besprechung löschen"
   label_recurring_meeting_restore: "Dieses Vorkommen wiederherstellen"
@@ -335,9 +335,9 @@ de:
             E-Mail-Kalenderaktualisierungen sind deaktiviert. Die Teilnehmer erhalten keine E-Mails bei Änderungen an der Teilnehmerliste.
         onetime:
           enabled: >
-            All participants will receive updated calendar invites via email when you add or remove participants.
+            Alle Teilnehmer erhalten aktualisierte Kalendereinladungen per E-Mail, wenn Sie Teilnehmer hinzufügen oder entfernen.
           disabled: >
-            Participants will not receive an email informing them of changes to meeting date, time or participants.
+            Die Teilnehmer erhalten keine E-Mail, die sie über Änderungen des Datums, der Uhrzeit oder der Teilnehmer der Besprechung informiert.
         occurrence:
           enabled: >
             E-Mail-Kalenderaktualisierungen sind für die Terminserie aktiviert. Alle Teilnehmenden erhalten aktualisierte Kalendereinladungen, die sie über Ihre Änderungen an dieser Besprechung informieren.
@@ -349,15 +349,15 @@ de:
           disabled: >
             E-Mail-Kalenderaktualisierungen sind für die Terminserie deaktiviert. Die Teilnehmenden erhalten keine E-Mail, die sie über Ihre Änderungen an dieser Vorlage oder Ereignisse der Serie informiert.
     presentation_mode:
-      title: "Presentation Mode"
-      button_present: "Present"
+      title: "Präsentationsmodus"
+      button_present: "Präsentieren"
       exit: "Präsentation verlassen"
       current_item: "Aktuelles Element"
       total_items: "%{current} von %{total}"
-      previous: "Previous"
-      next: "Next"
+      previous: "Zurück"
+      next: "Weiter"
       no_items: "Keine Tagesordnungspunkte"
-      no_items_flash: "There are no agenda items to present."
+      no_items_flash: "Es sind keine Tagesordnungspunkte vorhanden."
   meeting_section:
     untitled_title: "Unbenannter Abschnitt"
     delete_confirmation: "Wenn Sie den Abschnitt löschen, werden auch alle zugehörigen Tagesordnungspunkte gelöscht. Möchten Sie fortfahren?"
@@ -388,9 +388,9 @@ de:
       label_view_template: "Vorlage ansehen"
       label_edit_template: "Vorlage bearbeiten"
       banner_html: >
-        You are currently editing a template of a meeting series: %{link}. Every new occurrence of a meeting in the series will use this template. Changes will not affect past or already-created meetings.
+        Sie bearbeiten gerade eine Vorlage einer Terminserie: %{link}. Jede neue Besprechung der Serie kopiert diese Vorlage. Änderungen wirken sich nicht auf frühere oder bereits erstellte Besprechungen aus.
       draft_banner_html: >
-        You are currently editing a template of a meeting series: %{link}. Every new occurrence of a meeting in the series will use this template. Changes will not affect past or already-created meetings. No email invites will be sent in this current draft mode until you open the first meeting.
+        Sie bearbeiten gerade eine Vorlage einer Terminserie: %{link}. Jede neue Besprechung der Serie kopiert diese Vorlage. Änderungen wirken sich nicht auf frühere oder bereits erstellte Besprechungen aus. In diesem aktuellen Entwurfsmodus werden keine E-Mail-Einladungen versendet, bis Sie das erste Meeting öffnen.
     frequency:
       x_daily:
         one: "Jeden Tag"
@@ -553,18 +553,18 @@ de:
   label_meeting_close_action: "Besprechung schließen"
   label_meeting_in_progress_action: "Besprechung starten"
   label_meeting_open_action: "Besprechung öffnen"
-  text_meeting_draft_description: "Prepare your agenda in draft mode. This meeting will not send out any calendar updates or invites, even if you change meeting details or add/remove participants."
+  text_meeting_draft_description: "Bereiten Sie Ihre Tagesordnung als Entwurf vor. Besprechungen in diesem Modus versenden keine Kalenderaktualisierungen oder Einladungen, selbst wenn Sie Besprechungsdetails ändern oder Teilnehmer hinzufügen/entfernen."
   text_meeting_open_description: "Sie können Tagesordnungspunkte hinzufügen oder entfernen und bearbeiten. Sobald die Tagesordnung fertig ist, wechseln Sie auf In Durchführung, um Ergebnisse zu dokumentieren."
   text_meeting_closed_description: "Diese Besprechung ist abgeschlossen. Sie können keine Tagesordnungspunkte mehr hinzufügen/entfernen."
   text_meeting_in_progress_description: "Sie können die Tagesordnung ändern, die Ergebnisse für jeden Agendapunkt dokumentieren und die Anwesenheit der Teilnehmer verfolgen. Sobald die Besprechung abgeschlossen ist, können Sie sie als geschlossen markieren, um sie zu sperren."
   text_meeting_open_dropdown_description: "Alle bestehenden Ergebnisse bleiben bestehen, aber die Benutzer werden nicht in der Lage sein, neue Ergebnisse hinzuzufügen."
   text_meeting_in_progress_dropdown_description: "Ergebnisse der Besprechung festhalten, wie z. B. Informationsbedarf oder Entscheidungen, die während der Besprechung getroffen werden."
   text_meeting_closed_dropdown_description: "Diese Besprechung ist geschlossen. Sie können keine Tagesordnungspunkte mehr hinzufügen/entfernen."
-  text_meeting_draft_banner: "You are currently in draft mode. This meeting will not send out any calendar updates or invites, even if you change meeting details or add/remove participants."
-  text_exit_draft_mode_dialog_title: "Open this meeting and send invites?"
-  text_exit_draft_mode_dialog_subtitle: "You cannot return to draft mode once you schedule a meeting."
-  text_exit_draft_mode_dialog_template_title: "Open the first occurrence of this meeting series?"
-  text_exit_draft_mode_dialog_template_subtitle: "You cannot return to draft mode after this."
+  text_meeting_draft_banner: "Dieses Meeting ist derzeit ein Entwurf. Diese Besprechung sendet keine Kalenderaktualisierungen oder Einladungen, selbst wenn Sie Besprechungsdetails ändern oder Teilnehmer hinzufügen/entfernen."
+  text_exit_draft_mode_dialog_title: "Diese Besprechung öffnen und Einladungen verschicken?"
+  text_exit_draft_mode_dialog_subtitle: "Sie können nicht mehr zum Entwurfsmodus zurückkehren, sobald Sie die Besprechung eröffnen."
+  text_exit_draft_mode_dialog_template_title: "Das erste Vorkommen dieser Terminserie öffnen?"
+  text_exit_draft_mode_dialog_template_subtitle: "Sie können danach nicht mehr in den Entwurfsmodus zurückkehren."
   text_meeting_not_editable_anymore: "Diese Besprechung ist nicht mehr bearbeitbar."
   text_meeting_not_present_anymore: "Dieses Meeting wurde gelöscht. Bitte wählen Sie eine andere Besprechung."
   label_add_work_package_to_meeting_dialog_title: "Besprechung auswählen"

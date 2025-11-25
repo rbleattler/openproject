@@ -296,7 +296,7 @@ de:
       warning: "Bitte teilen Sie diese URL nicht mit anderen Benutzern. Jeder mit diesem Link kann die Arbeitspaket-Details ohne Konto oder Passwort anzeigen."
       token_name_label: "Wo werden Sie diesen Kalender nutzen?"
       token_name_placeholder: 'Geben sie einen Namen ein (z.B. "Telefon")'
-      token_name_description_text: 'If you subscribe to this calendar from multiple devices, this name will help you distinguish between them in your <a href="%{myAccessTokensUrl}" target="_blank">access tokens</a> list.'
+      token_name_description_text: 'Wenn Sie diesen Kalender auf mehreren Geräten abonnieren, wird Ihnen dieser Name helfen, zwischen diesen in der Liste der <a href="%{myAccessTokensUrl}", target="_blank">Zugriffstoken</a> zu unterscheiden.'
       copy_url_label: "URL kopieren"
       ical_generation_error_text: "Beim Generieren der Kalender-URL ist ein Fehler aufgetreten."
       success_message: 'Die URL "%{name}" wurde erfolgreich in Ihre Zwischenablage kopiert. Fügen Sie sie in Ihren Kalender-Client ein, um das Abonnement abzuschließen.'

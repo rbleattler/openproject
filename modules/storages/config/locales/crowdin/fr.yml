@@ -348,9 +348,10 @@ fr:
         sp_client_write_permission_missing: Le client semble ne pas avoir les autorisations d'écriture. Veuillez vérifier la documentation d'installation de votre espace de stockage.
         sp_existing_test_folder: Le dossier %{folder_name} requis pour le test existe déjà. Veuillez le supprimer et réessayer.
         sp_oauth_request_error: La requête liée à l'utilisateur vers SharePoint a échoué. Veuillez consulter les journaux du serveur pour obtenir plus d'informations.
+        sp_oauth_request_unauthorized: The current user isn't authorized to access the remote file storage. Please check the server logs for further information.
         sp_oauth_token_missing: OpenProject ne peut pas tester la communication au niveau utilisateur avec OneDrive/SharePoint, car l'utilisateur n'a pas encore lié son compte Microsoft.
         sp_tenant_id_missing: L'identifiant de répertoire (locataire) configuré est manquant pour SharePoint. Veuillez vérifier la configuration.
-        sp_unexpected_content: Contenu inattendu trouvé dans le lecteur SharePoint.
+        sp_unexpected_content: Unexpected content found in the SharePoint Document Library.
         unknown_error: La connexion n'a pas pu être validée. Une erreur inconnue s'est produite. Veuillez consulter les journaux du serveur pour en savoir plus.
       label_error: Erreur
       label_failed: Échec

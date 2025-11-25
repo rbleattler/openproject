@@ -27,7 +27,7 @@ de:
     errors:
       models:
         document_type:
-          one_or_more_required: "Cannot delete the last document type"
+          one_or_more_required: "Kann den letzten Dokumenttyp nicht löschen"
     models:
       document: "Dokument"
       documents: "Dokumente"
@@ -55,13 +55,12 @@ de:
       heading: "Es sind noch keine Dokumente vorhanden"
       description: "Es sind keine Dokumente in dieser Ansicht vorhanden. Sie können auf die Schaltfläche unten klicken, um eines hinzuzufügen."
     document_categories_deprecation_notice:
-      heading: File categories are now called 'Document types'
+      heading: Dateikategorien heißen jetzt 'Dokumenttypen'
       description: |-
-        Your existing file categories have been converted to document types with the introduction of the new Documents module.
-        All existing documents have also been migrated to these new types.
-      primary_action: Configure document types
-      secondary_action: Learn more about the Documents module
-    document_type_actions: "Document type actions"
+        Mit der Einführung des neuen Moduls Dokumente wurden Ihre bestehenden Dateikategorien in Dokumenttypen umgewandelt. Alle bestehenden Dokumente wurden ebenfalls auf diese neuen Typen konvertiert.
+      primary_action: Dokumenttypen konfigurieren
+      secondary_action: Erfahren Sie mehr über das Dokumenten-Modul
+    document_type_actions: "Aktionen auf diesem Dokument"
     index_page:
       name: "Name"
       type: "Art"
@@ -71,8 +70,8 @@ de:
       all: "Alle Dokumente"
       types: "Typen"
     last_updated_at: "Zuletzt aktualisiert %{time}."
-    active_editors: "Active editors"
-    active_editors_count: "%{count} active editors"
+    active_editors: "Aktive Bearbeiter"
+    active_editors_count: "%{count} aktive Bearbeiter"
     label_attachment_author: "Autor des Dokuments"
     label_categories: "Kategorien"
     new_category: "Neue Kategorie"
@@ -80,20 +79,20 @@ de:
     delete_dialog:
       title: "Dokument löschen"
       heading: "Dieses Dokument löschen?"
-      confirmation_message_html: "This will permanently delete this document and all file attachments. Are you sure you want to do this?"
+      confirmation_message_html: "Dadurch werden dieses Dokument und seine Anhänge endgültig gelöscht. Sind Sie sicher, dass Sie dies tun möchten?"
     delete_document_type_dialog:
       title: Dokumenttyp löschen
       heading: Diesen Dokumenttyp löschen?
       confirmation_message: |-
-        The type "%{type_name}" is currently unused. Deleting this type will have no effect on existing documents.
-      select_reassign_to_label: Reassign documents to
+        Der Typ "%{type_name}" ist derzeit unbenutzt. Das Löschen dieses Typs hat keine Auswirkungen auf bestehende Dokumente.
+      select_reassign_to_label: Dokumente neu zuweisen als
       reassign_message:
-        one: The type "%{type_name}" is currently being used in %{document_count} document. Please select which type to reassign them to.
-        other: The type "%{type_name}" is currently being used in %{document_count} documents. Please select which type to reassign them to.
+        one: Der Typ "%{type_name}" wird derzeit im Dokument %{document_count} verwendet. Bitte wählen Sie aus, welchem Typ Sie sie neu zuordnen möchten.
+        other: Der Typ "%{type_name}" wird derzeit in %{document_count} Dokumenten verwendet. Bitte wählen Sie aus, welchem Typ Sie sie neu zuordnen möchten.
       at_least_one_type_required:
-        title: Cannot delete document type
-        heading: Cannot delete the last document type
-        message: There must always be at least one document type configured. Create another one first if you want to delete this one.
+        title: Kann diesen Dokumenttyp nicht löschen
+        heading: Kann den letzten Dokumenttyp nicht löschen
+        message: Es muss immer mindestens ein Dokumenttyp konfiguriert sein. Erstellen Sie zuerst einen anderen, wenn Sie diesen löschen möchten.
   label_document_added: "Dokument hinzugefügt"
   label_document_new: "Neues Dokument"
   label_document_plural: "Dokumente"

@@ -346,9 +346,10 @@ ja:
         sp_client_write_permission_missing: クライアントはSharePointで書き込み権限が不足しているようです。ストレージのセットアップドキュメントを確認してください。
         sp_existing_test_folder: テストに必要なフォルダ %{folder_name} は SharePoint に既に存在します。削除してから、もう一度お試しください。
         sp_oauth_request_error: SharePointへのユーザーバウンドリクエストに失敗しました。詳細については、サーバーのログを確認してください。
+        sp_oauth_request_unauthorized: The current user isn't authorized to access the remote file storage. Please check the server logs for further information.
         sp_oauth_token_missing: OpenProject は、ユーザーがまだ SharePoint アカウントをリンクしていないため、ユーザーレベルの SharePoint との通信をテストできません。
         sp_tenant_id_missing: 構成されたディレクトリ（テナント）IDがSharePointにありません。設定を確認してください。
-        sp_unexpected_content: SharePointドライブに予期しないコンテンツが見つかりました。
+        sp_unexpected_content: Unexpected content found in the SharePoint Document Library.
         unknown_error: 接続を検証できませんでした。不明なエラーが発生しました。詳細についてはサーバーログを確認してください。
       label_error: エラー
       label_failed: 失敗しました

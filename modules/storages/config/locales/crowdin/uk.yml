@@ -352,9 +352,10 @@ uk:
         sp_client_write_permission_missing: Схоже, клієнту бракує дозволів на записування в SharePoint. Ознайомтеся з документацією щодо конфігурації для свого сховища.
         sp_existing_test_folder: Папка «%{folder_name}», необхідна для тестування, уже існує в SharePoint. Видаліть її і повторіть спробу.
         sp_oauth_request_error: Не вдалося виконати пов’язаний із користувачем запит до SharePoint. Докладні відомості наведено в журналах сервера.
+        sp_oauth_request_unauthorized: The current user isn't authorized to access the remote file storage. Please check the server logs for further information.
         sp_oauth_token_missing: OpenProject не може перевірити з’єднання на рівні користувача із SharePoint, оскільки користувач досі не прив’язав свій обліковий запис SharePoint.
         sp_tenant_id_missing: Бракує налаштованого ідентифікатора каталогу (клієнта). Перевірте конфігурацію.
-        sp_unexpected_content: На диску SharePoint знайдено неочікуваний контент.
+        sp_unexpected_content: Unexpected content found in the SharePoint Document Library.
         unknown_error: Не вдалося перевірити підключення. Сталася невідома помилка. Щоб дізнатися більше, перегляньте журнали сервера.
       label_error: Помилка
       label_failed: Не пройдено

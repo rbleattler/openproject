@@ -311,6 +311,25 @@ ja:
           zero: 子項目はありません
           one: 1 個の子項目があります
           other: "%{count} 個の子項目があります"
+      role_assignment:
+        title: Role Assignment
+        description: You can automatically grant a certain project role to any user assigned to this project attribute, regardless of that user’s original role in that project.
+        warning: Depending on the role selected below, the user assigned to this project attribute might gain significantly more permissions than they previously had, including the ability to add new members and elevate their role.
+        role_field_label: "Project Role"
+        role_field_caption: This project role will automatically be granted to any user assigned to this project attribute
+        review_hint: >
+          There are %{user_count} who are already assigned to this project attribute in various projects. They might get additional permissions and be added to projects they did not previously have access to.
+        review_button: Review users and permissions
+        dialog:
+          title: "Overview of users and permissions"
+          change: Change
+          changes:
+            new_member: Will be added as a member
+            remove_member: Will be removed as a member
+            gain_and_lose_role: Will lose role ‘%{old_role}’ and gain role ‘%{new_role}’
+            gain_role: Will gain role ‘%{new_role}’
+            lose_role: Will lose role ‘%{old_role}’
+            no_change: No changes
     text_add_new_custom_field: >
       新しいカスタムフィールドをプロジェクトに追加するには、それをこのプロジェクトに追加する前に、まず作成する必要があります。
     is_enabled_globally: "グローバルで有効"
@@ -548,7 +567,7 @@ ja:
       creation_wizard:
         export:
           description_attachment_export: "The generated artifact will be saved as a PDF attachment to the artifact work package."
-          description_file_link_export: "The artifact work package will have a file link to a PDF stored in an external file storage. Requires a working file storage with automatically-managed project folders. At the moment only Nextcloud file storages are supported."
+          description_file_link_export: "The artifact work package will have a file link to a PDF stored in an external file storage. Requires a working file storage with automatically-managed project folders for this project. At the moment only Nextcloud file storages are supported."
           description_file_storage_selection: "Select which of the configured external file storages should be used."
           external_file_storage: "External file storage"
           label_artifact_export: "Artifact export"
@@ -564,7 +583,6 @@ ja:
     wizard:
       sidebar_content_title: "Content"
       sections: "Sections"
-      title: "Project initiation request"
       no_help_text: "This attribute has no help text defined."
       success: "Project attributes have been saved successfully."
       progress_label: "%{current} of %{total}"
@@ -2130,7 +2148,10 @@ ja:
     copy_options:
       dependencies_label: "プロジェクトからコピー"
   create_project:
+    attributes_heading: "Required attributes"
+    details_heading: "Project details"
     template_label: "テンプレートを使用"
+    template_heading: "Templated projects"
     copy_options:
       dependencies_label: "テンプレートからコピー"
     blank_template:
@@ -2138,10 +2159,14 @@ ja:
       description: Start from scratch. Manually add project attributes, members and modules.
     blank_description: No description provided.
   create_portfolio:
+    details_heading: "Portfolio details"
+    template_heading: "Templated portfolios"
     blank_template:
       label: "Blank portfolio"
       description: Start from scratch. Manually add portfolio attributes, members and modules.
   create_program:
+    details_heading: "Program details"
+    template_heading: "Templated programs"
     blank_template:
       label: "Blank program"
       description: Start from scratch. Manually add program attributes, members and modules.
@@ -2674,6 +2699,7 @@ ja:
       new_features:
         header: "新機能と製品のアップデートについて読む。"
         learn_about: "すべての新機能の詳細"
+        missing: "There are no highlighted features yet."
         #We need to include the version to invalidate outdated translations in other locales
         "16_6":
           new_features_title: >
@@ -3095,7 +3121,6 @@ ja:
   label_installation_guides: "インストール ガイド"
   label_integer: "整数"
   label_interface: "インターフェイス"
-  label_interlinked_role_assignment: "Interlinked Role Assignment"
   label_internal: "社内"
   label_introduction_video: "Getting started video"
   label_invite_user: "ユーザを招待"
@@ -3289,6 +3314,9 @@ ja:
   label_project_hierarchy: "プロジェクトの階層構造"
   label_project_mappings: "プロジェクト"
   label_project_new: "新規プロジェクト"
+  label_project_initiation_request: "Project initiation request"
+  label_project_creation_wizard: "New project creation wizard"
+  label_project_mandate: "New project mandate"
   label_project_plural: "プロジェクト"
   label_project_list_plural: "プロジェクト一覧"
   label_project_life_cycle: "プロジェクトのライフ サイクル"
@@ -3302,7 +3330,6 @@ ja:
   label_project_view_all: "全プロジェクトを表示"
   label_project_show_details: "プロジェクトの詳細を表示"
   label_project_hide_details: "プロジェクトの詳細を非表示"
-  label_project_initiation_request: "Project initiation request"
   label_portfolio: "ポートフォリオ"
   label_portfolio_new: "新しいポートフォリオ"
   label_program: "プログラム"
@@ -4375,15 +4402,15 @@ ja:
         confirmation_message: "The initiation request wizard will no longer be available to new projects based on this template. Project managers and project owners will need to manually configure and fill out the relevant information in the Project overview."
         checkbox_message: "I understand that this action is not reversible"
       name:
-        artefact_name: "Artefact name"
-        artefact_name_caption: "Choose the name for this artefact that your project management framework recommends."
+        artifact_name: "Artifact name"
+        artifact_name_caption: "Choose the name for this artifact that your project management framework recommends."
         options:
           project_initiation_request: "Project initiation request"
           project_creation_wizard: "Project creation wizard"
           project_mandate: "Project mandate"
       submission:
         work_package_type: "Work package type"
-        work_package_type_caption: "The work package type that should be used to store the completed artefact."
+        work_package_type_caption: "The work package type that should be used to store the completed artifact."
         status_when_submitted: "Status when submitted"
         status_when_submitted_caption: "The status the generated work package will transition to once the request is submitted."
         send_confirmation_email: "Send confirmation email to the user who submitted the project initiation request"
@@ -4667,8 +4694,6 @@ ja:
     ユーザーを追加すると、現在の制限を超えます。外部ユーザーがこのサイトにアクセスできるように、<a href="%{upgrade_url}">プランをアップグレードして</a>ください。
   warning_user_limit_reached_instructions: >
     ユーザー制限(%{current}/%{max} アクティブユーザー)に達しました。 sales@openproject.com に連絡してEnterprise Editionプランをアップグレードし、ユーザーを追加してください。
-  warning_interlinking_custom_field_with_role_html: >
-    <strong>Warning:</strong> You are about to link a custom field with a role. This will give users with the "Edit Project Attributes" permission to add members to the project and they will be assigned the linked role. This may lead to privilege escalation because users can assign themselves higher privileges than intended. Please make sure you understand the implications of this action.
   warning_protocol_mismatch_html: >
 
   warning_bar:

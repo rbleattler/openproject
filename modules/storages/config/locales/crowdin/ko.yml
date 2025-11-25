@@ -346,9 +346,10 @@ ko:
         sp_client_write_permission_missing: 클라이언트가 SharePoint에서 쓰기 권한이 없는 것 같습니다. 저장소에 대한 설정 설명서를 확인하세요.
         sp_existing_test_folder: 테스트에 필요한 %{folder_name} 폴더가 SharePoint에 이미 있습니다. 이 폴더를 삭제한 후에 다시 시도하세요.
         sp_oauth_request_error: SharePoint에 대한 사용자 바인딩 요청이 실패했습니다. 자세한 내용은 서버 로그를 확인하세요.
+        sp_oauth_request_unauthorized: The current user isn't authorized to access the remote file storage. Please check the server logs for further information.
         sp_oauth_token_missing: 사용자가 아직 SharePoint 계정을 링크하지 않았기 때문에 OpenProject가 SharePoint와의 사용자 수준 통신을 테스트할 수 없습니다.
         sp_tenant_id_missing: 구성된 디렉터리(테넌트) ID가 SharePoint에서 누락되었습니다. 구성을 확인하세요.
-        sp_unexpected_content: SharePoint 드라이브에서 예기치 않은 콘텐츠가 발견되었습니다.
+        sp_unexpected_content: Unexpected content found in the SharePoint Document Library.
         unknown_error: 연결에 대한 유효성 검사를 할 수 없습니다. 알 수 없는 오류가 발생했습니다. 자세한 내용은 서버 로그를 확인하세요.
       label_error: 오류
       label_failed: 실패함

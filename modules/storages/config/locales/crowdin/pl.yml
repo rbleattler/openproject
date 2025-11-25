@@ -352,9 +352,10 @@ pl:
         sp_client_write_permission_missing: Klient nie ma uprawnień zapisu w usłudze SharePoint. Sprawdź dokumentację konfiguracji swojej pamięci masowej.
         sp_existing_test_folder: Wymagany do testowania folder %{folder_name} już istnieje w usłudze SharePoint. Usuń go i spróbuj ponownie.
         sp_oauth_request_error: Związane z użytkownikiem żądanie do usługi SharePoint nie powiodło się. W celu uzyskania dodatkowych informacji sprawdź dzienniki serwera.
+        sp_oauth_request_unauthorized: The current user isn't authorized to access the remote file storage. Please check the server logs for further information.
         sp_oauth_token_missing: Aplikacja OpenProject nie może przetestować komunikacji z usługą SharePoint na poziomie użytkownika, ponieważ użytkownik nie powiązał jeszcze swojego konta SharePoint.
         sp_tenant_id_missing: Brakuje skonfigurowanego identyfikatora katalogu (dzierżawcy) usługi SharePoint. Sprawdź konfigurację.
-        sp_unexpected_content: Na dysku usługi SharePoint znaleziono nieoczekiwaną zawartość.
+        sp_unexpected_content: Unexpected content found in the SharePoint Document Library.
         unknown_error: Nie można zweryfikować połączenia. Wystąpił nieznany błąd. Aby uzyskać dalsze informacje, sprawdź dzienniki serwera.
       label_error: Błąd
       label_failed: Niepowodzenie

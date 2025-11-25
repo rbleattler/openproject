@@ -346,9 +346,10 @@ vi:
         sp_client_write_permission_missing: The client seems to have write permissions missing in SharePoint. Please check the setup documentation for your storage.
         sp_existing_test_folder: The folder %{folder_name} needed for testing already exists in SharePoint. Please delete it and try again.
         sp_oauth_request_error: The user-bound request to SharePoint failed. Please check the server logs for further information.
+        sp_oauth_request_unauthorized: The current user isn't authorized to access the remote file storage. Please check the server logs for further information.
         sp_oauth_token_missing: OpenProject cannot test the user level communication with SharePoint as the user did not yet link their SharePoint account.
         sp_tenant_id_missing: The configured directory (tenant) id is missing for SharePoint. Please check the configuration.
-        sp_unexpected_content: Unexpected content found in the SharePoint drive.
+        sp_unexpected_content: Unexpected content found in the SharePoint Document Library.
         unknown_error: Kết nối không thể được xác thực. Đã xảy ra lỗi không xác định. Vui lòng kiểm tra nhật ký máy chủ để biết thêm thông tin.
       label_error: Lỗi
       label_failed: Failed

@@ -165,7 +165,7 @@ de:
           group_does_not_exist: "%{group} existiert nicht. Überprüfen Sie Ihre Nextcloud Instanz-Konfiguration."
           insufficient_privileges: OpenProject hat nicht genügend Rechte, um %{user} zu %{group} hinzuzufügen. Überprüfen Sie Ihre Gruppeneinstellungen in Nextcloud.
           not_allowed: Nextcloud blockiert die Anfrage.
-          not_found: OpenProject could not find the file on the Nextcloud Storage Provider. Please check if it wasn't deleted.
+          not_found: OpenProject konnte die Datei auf dem Nextcloud Dateispeicher nicht finden. Bitte überprüfen Sie, ob die Datei nicht gelöscht wurde.
           unauthorized: OpenProject konnte nicht mit Nextcloud synchronisieren. Bitte überprüfen Sie Ihren Speicher und die Nextcloud-Konfiguration.
           user_does_not_exist: "%{user} existiert nicht in Nextcloud."
         one_drive_sync_service:
@@ -348,9 +348,10 @@ de:
         sp_client_write_permission_missing: Der Client hat anscheinend keine Schreibberechtigungen in SharePoint. Bitte überprüfen Sie die Setup-Dokumentation für Ihren Speicher.
         sp_existing_test_folder: Der für den Test benötigte Ordner %{folder_name} existiert bereits in SharePoint. Bitte löschen Sie ihn und versuchen Sie es erneut.
         sp_oauth_request_error: Die benutzergebundene Anfrage an SharePoint ist fehlgeschlagen. Bitte prüfen Sie die Serverprotokolle für weitere Informationen.
+        sp_oauth_request_unauthorized: The current user isn't authorized to access the remote file storage. Please check the server logs for further information.
         sp_oauth_token_missing: OpenProject kann die Kommunikation auf Benutzerebene mit SharePoint nicht testen, da der Benutzer sein SharePoint-Konto noch nicht verknüpft hat.
         sp_tenant_id_missing: Die konfigurierte Verzeichnis-ID (Tenant) fehlt für SharePoint. Bitte überprüfen Sie die Konfiguration.
-        sp_unexpected_content: Unerwarteter Inhalt in der SharePoint-Dokumentbibliothek (Drive) gefunden.
+        sp_unexpected_content: Unexpected content found in the SharePoint Document Library.
         unknown_error: Die Verbindung konnte nicht validiert werden. Es ist ein unbekannter Fehler aufgetreten. Bitte prüfen Sie die Serverprotokolle für weitere Informationen.
       label_error: Fehler
       label_failed: Fehlgeschlagen

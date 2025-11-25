@@ -348,9 +348,10 @@ pt-PT:
         sp_client_write_permission_missing: O cliente parece ter permissões de escrita em falta no SharePoint. Verifique a documentação de configuração do seu armazenamento.
         sp_existing_test_folder: A pasta %{folder_name} necessária para os testes já existe no SharePoint. Elimine-a e tente novamente.
         sp_oauth_request_error: O pedido de ligação do utilizador ao SharePoint falhou. Verifique os registos do servidor para mais informações.
+        sp_oauth_request_unauthorized: The current user isn't authorized to access the remote file storage. Please check the server logs for further information.
         sp_oauth_token_missing: O OpenProject não consegue testar a comunicação ao nível do utilizador com o SharePoint, visto que o utilizador ainda não associou a sua conta SharePoint.
         sp_tenant_id_missing: O ID do diretório (inquilino) configurado está em falta no SharePoint. Verifique a configuração.
-        sp_unexpected_content: Conteúdo inesperado encontrado na unidade do SharePoint.
+        sp_unexpected_content: Unexpected content found in the SharePoint Document Library.
         unknown_error: Não foi possível validar a ligação. Ocorreu um erro desconhecido. Consulte os registos do servidor para obter mais informações.
       label_error: Erro
       label_failed: Não aprovado
