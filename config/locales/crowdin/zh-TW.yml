@@ -4559,7 +4559,7 @@ zh-TW:
   text_custom_logo_instructions: >
     標誌會自動縮放以適應頁首 (Header) 空間。為了達到最佳效果，請上傳一個白色標誌，並置於透明的 130×47 像素圖像上。您可以在該圖像內部添加任意多您想要的間距。
   text_custom_logo_mobile_instructions: >
-    The logo automatically scales to fit the header. For best results, upload a white logo on a transparent 130×33px image. You can add as much spacing inside that image as you like.
+    徽標會自動調整大小以配合標頭。為達到最佳效果，請在 130×33px 的透明圖片上上傳白色標誌。您可以隨意在該圖像中加入間距。
   text_custom_export_logo_instructions: >
     這是出現在 PDF 匯出中的Logo。 它必須是 PNG 或 JPEG 影像檔。 建議在透明或白色背景上使用黑色或彩色標誌。
   text_custom_export_cover_instructions: >

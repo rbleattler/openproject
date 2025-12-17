@@ -238,10 +238,10 @@ ru:
     file_storage_view:
       access_management:
         automatic_management: Включить автоматический доступ и папки
-        automatic_management_description: Each project will be able to decide, when a storage is added to it, whether they want the automatically-managed or the manual approach to folder and access management.
-        description: OpenProject can automatically create and manage project folders when a file storage is added to a project. This can result in a more organized folder structure and straightforward access management that guarantees access to all relevant users.
-        manual_management: Only allow manually-managed access and folders
-        manual_management_description: Projects using this storage will not be offered the option of the automatically-managed approach. Folders and access must be managed manually.
+        automatic_management_description: Каждый проект сможет решить, когда в него будет добавлено хранилище, хотят ли они использовать автоматический или ручной подход к управлению папками и доступом.
+        description: OpenProject может автоматически создавать папки проекта и управлять ими, когда в проект добавляется файловое хранилище. Это может привести к более организованной структуре папок и простому управлению доступом, гарантирующему доступ всем необходимым пользователям.
+        manual_management: Разрешить только ручной управляемый доступ и папки
+        manual_management_description: Проектам, использующим это хранилище, не будет предложена возможность автоматического управления. Управление папками и доступом должно осуществляться вручную.
         setup_incomplete: Выберите тип управления доступом пользователя и созданием папок.
         subtitle: Управление папками и доступом
       access_management_section: Доступ и папки проекта
@@ -251,9 +251,9 @@ ru:
       one_drive:
         access_management:
           automatic_management: Включить автоматический доступ и папки
-          automatic_management_description: Each project using this file storage will necessarily have to use the automatically-managed approach to folder and access management. They cannot do it manually.
+          automatic_management_description: Каждый проект, использующий это файловое хранилище, обязательно должен будет использовать автоматически управляемый подход к управлению папками и доступом. Они не смогут делать это вручную.
           manual_management: Разрешить только ручной управляемый доступ и папки
-          manual_management_description: Projects using this storage will not be offered the option of the automatically-managed approach. Folders and access must be managed manually.
+          manual_management_description: Проектам, использующим это хранилище, не будет предложена возможность автоматического управления. Управление папками и доступом должно осуществляться вручную.
       one_drive_oauth: Azure OAuth
       openproject_oauth: OpenProject OAuth
       project_folders: Папки проекта

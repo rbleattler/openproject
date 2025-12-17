@@ -44,7 +44,7 @@ ru:
               response_is_not_json: " не возвращает тело JSON."
               response_misses_required_attributes: " не возвращает необходимые атрибуты. Недостающими атрибутами являются: %{missing_attributes}."
           invalid_claims_essential: "не определяет логическое значение %{attribute}."
-          invalid_claims_location: "contain unsupported locations: %{invalid}. Supported locations are: %{supported}."
+          invalid_claims_location: "содержат неподдерживаемые местоположения: %{invalid}. К поддерживаемым местоположениям относятся: %{supported}."
           invalid_claims_values: "не определяет массив значений в %{attribute}."
           non_object_attribute: "не определяет JSON объект в %{attribute}."
   provider:

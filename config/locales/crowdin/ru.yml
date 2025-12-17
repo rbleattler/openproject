@@ -538,13 +538,13 @@ ru:
         program_template_caption: "Выберите шаблон программы, который будет использоваться по умолчанию для новых подпунктов этого типа."
         no_template: "Нет предопределенного шаблона"
       template:
-        menu_title: "Template"
-        title: "Template settings"
-        enable_failed: "Failed to enable template mode."
+        menu_title: "Шаблон"
+        title: "Настройки шаблона"
+        enable_failed: "Не удалось включить режим шаблона."
         members:
-          excluded_roles_label: "Roles to exclude when template is applied"
+          excluded_roles_label: "Роли, которые нужно исключить при применении шаблона"
           excluded_roles_caption: >
-            When creating a new project from this template, the roles selected above will be omitted. This allows you to select which members will be excluded based on their project roles. Users can then access the template for viewing purposes without being granted access to new projects created from it.
+            При создании нового проекта по этому шаблону роли, выбранные выше, будут опущены. Это позволит Вам выбрать, какие участники будут исключены на основании их ролей в проекте. В этом случае пользователи смогут обращаться к шаблону для просмотра, не получая доступа к новым проектам, созданным на его основе.
       actions:
         label_enable_all: "Включить всё"
         label_disable_all: "Выключить всё"
@@ -802,7 +802,7 @@ ru:
         required: "Пожалуйста, выберите роль"
       message:
         label: "Сообщение о приглашении"
-        description: "We will send an email to the user, to which you can add a personal message here. An explanation for the invitation could be useful, or perhaps a bit of information regarding the project to help them get started."
+        description: "Мы отправим пользователю письмо, к которому Вы можете добавить личное сообщение здесь. Возможно, будет полезно пояснение к приглашению или немного информации о проекте, чтобы помочь им начать работу."
       summary:
         next_button: "Отправить приглашение"
       success_message:
@@ -2875,17 +2875,17 @@ ru:
         #We need to include the version to invalidate outdated translations in other locales
         "17_0":
           new_features_title: >
-            The release contains various new features and improvements, such as:
+            Релиз содержит различные новые функции и улучшения, такие как:
           new_features_list:
-            line_0: Real-time documents collaboration.
-            line_1: Ability to structure related projects into programs and portfolios to focus them on strategic goals (Enterprise add-on).
-            line_2: Better meeting management with draft mode, presentation mode, enhanced outcomes, and iCal subscription.
-            line_3: Updated SharePoint integration with more restrictive permissions (Enterprise add-on).
-            line_4: Redesigned project overview with new tabs, configurable widgets, and an improved layout.
-            line_5: Option to guard the privacy of users not working in the same project more strictly.
-            line_6: Improved project creation flow with better template selection.
-            line_7: Smarter global search including type and status, improving precision in several autocompleters.
-            line_8: Accessibility improvements with ALT texts and improved chart colors.
+            line_0: Совместная работа с документами в режиме реального времени.
+            line_1: Возможность структурировать связанные проекты в программы и портфели, чтобы направить их на достижение стратегических целей.
+            line_2: Улучшенное управление совещаниями с режимом черновика, режимом презентации, улучшенными результатами и подпиской на iCal.
+            line_3: Обновленная интеграция с SharePoint с более строгими разрешениями.
+            line_4: Переработанный обзор проекта с новыми вкладками, настраиваемыми виджетами и улучшенным макетом.
+            line_5: Возможность более строго охранять конфиденциальность пользователей, не работающих в одном проекте.
+            line_6: Улучшенный процесс создания проекта с более удобным выбором шаблона.
+            line_7: Более удобный глобальный поиск, включая тип и статус, улучшение точности нескольких автозаполнений.
+            line_8: Улучшена доступность текстов ALT и улучшены цвета графиков.
     links:
       upgrade_enterprise_edition: "Обновить до корпоративной версии"
       postgres_migration: "Перенос вашей установки в PostgreSQL"
@@ -3108,7 +3108,7 @@ ru:
   label_board_plural: "Доски"
   label_branch: "Ветка"
   label_browse: "Обзор"
-  label_builtin: "Built-in"
+  label_builtin: "Встроенный"
   label_bulk_edit_selected_work_packages: "Массовое изменение выбранных пакетов работ"
   label_bundled: "(В комплекте)"
   label_calendar: "Календарь"
@@ -4036,7 +4036,7 @@ ru:
   permission_comment_news: "Комментировать новость"
   permission_commit_access: "Возможность чтения/записи в репозиторий (commit)"
   permission_copy_projects: "Копировать проект"
-  permission_copy_projects_explanation: "In template projects, this permission has a secondary function, it allows the creation of new projects derived from the template."
+  permission_copy_projects_explanation: "В шаблонных проектах это разрешение имеет второстепенную функцию - оно позволяет создавать новые проекты, основанные на шаблоне."
   permission_copy_work_packages: "Дублировать пакеты работ"
   permission_create_backup: "Создание резервных копий"
   permission_delete_work_package_watchers: "Удалить наблюдателей"
@@ -4587,7 +4587,7 @@ ru:
               description: "Добавьте все атрибуты проекта в область на правой боковой панели в обзоре проекта."
     project_initiation_request:
       header_description: >
-        OpenProject can generate a step-by-step wizard to help project managers fill out a project initiation request. You can choose which project attributes should be included and create a PDF artifact as a result.
+        OpenProject может создать пошаговый мастер, который поможет руководителям проектов заполнить запрос на инициацию проекта. Вы можете выбрать, какие атрибуты проекта должны быть включены, и в результате создать артефакт в формате PDF.
       status:
         submitted: "%{wizard_name} был отправлен"
         submitted_description: "Нажмите на кнопку ниже, чтобы перейти к пакету работ для процесса подачи заявки."
@@ -4623,7 +4623,7 @@ ru:
         status_when_submitted_caption: "Статус, в который перейдет созданный пакет работ после отправки запроса."
         send_confirmation_email: "Отправить подтверждение по электронной почте пользователю, подавшему запрос на инициирование проекта"
         assignee: "Назначенный при отправке"
-        assignee_caption_html: "The user or group assigned to this project attribute will also become the assignee of the new work package. This list includes active project attributes of type <i>User</i> only."
+        assignee_caption_html: "Пользователь или группа, назначенная этому атрибуту проекта, также станет получателем нового пакета работ. Этот список включает активные атрибуты проекта только типа <i>Пользователь</i>."
         confirmation_email_text: "Текст письма подтверждения"
         confirmation_email_default: "Здравствуйте,\n\nВы подали запрос на инициирование проекта **%{project_name}**. Сейчас он ожидает рассмотрения.\nЩелкните по ссылке ниже, чтобы получить доступ к пакету работ с Вашим запросом."
         work_package_comment: "Комментарий к пакету работ"
@@ -4707,7 +4707,7 @@ ru:
   text_custom_logo_instructions: >
     Логотип автоматически масштабируется, чтобы соответствовать заголовку. Для достижения наилучших результатов загрузите белый логотип на прозрачном фоне размером 130×47px. Вы можете добавить столько интервалов внутри этого изображения, сколько захотите.
   text_custom_logo_mobile_instructions: >
-    The logo automatically scales to fit the header. For best results, upload a white logo on a transparent 130×33px image. You can add as much spacing inside that image as you like.
+    Логотип автоматически масштабируется, чтобы соответствовать заголовку. Для достижения наилучших результатов загрузите белый логотип на прозрачном фоне размером 130×33px. Вы можете добавить столько интервалов внутри этого изображения, сколько захотите.
   text_custom_export_logo_instructions: >
     Это логотип, который отображается при экспорте в формате PDF. Это должен быть файл изображения в формате PNG или JPEG. Рекомендуется использовать черный или цветной логотип на прозрачном или белом фоне.
   text_custom_export_cover_instructions: >

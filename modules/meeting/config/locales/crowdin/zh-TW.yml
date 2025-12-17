@@ -363,11 +363,11 @@ zh-TW:
     empty_text: "將項目拖曳至此處或建立新項目"
   meeting_participant:
     participation_status:
-      needs_action: "No response"
-      accepted: "Accepted"
-      declined: "Declined"
-      tentative: "Maybe"
-      unknown: "Unknown"
+      needs_action: "沒有回應"
+      accepted: "已接受"
+      declined: "拒絕"
+      tentative: "不確定"
+      unknown: "未知"
   recurring_meeting:
     time_zone_difference_banner:
       title: "時區差異"
